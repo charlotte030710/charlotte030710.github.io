@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>面试题目 | My Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、Java 基础语法 &amp; 关键字1. JDK、JRE 和 JVM 的区别 JVM（Java Virtual Machine）：Java 虚拟机，负责执行字节码（.class）。提供类加载、字节码校验、内存管理（堆、方法区）、执行引擎、垃圾回收、线程调度等。是抽象的规范，具体由不同厂商实现（HotSpot、OpenJ9 等）。 JRE（Java Runtime Environment）：运">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题目">
+<meta property="og:url" content="http://example.com/2025/09/11/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/index.html">
+<meta property="og:site_name" content="My Blog">
+<meta property="og:description" content="一、Java 基础语法 &amp; 关键字1. JDK、JRE 和 JVM 的区别 JVM（Java Virtual Machine）：Java 虚拟机，负责执行字节码（.class）。提供类加载、字节码校验、内存管理（堆、方法区）、执行引擎、垃圾回收、线程调度等。是抽象的规范，具体由不同厂商实现（HotSpot、OpenJ9 等）。 JRE（Java Runtime Environment）：运">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-09-11T10:29:28.000Z">
+<meta property="article:modified_time" content="2025-09-11T10:29:28.028Z">
+<meta property="article:author" content="Charlotte">
+<meta property="article:tag" content="Hexo, Markdown">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="My Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我的个人博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-面试题目" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/09/11/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/" class="article-date">
+  <time class="dt-published" datetime="2025-09-11T10:29:28.000Z" itemprop="datePublished">2025-09-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      面试题目
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、Java-基础语法-关键字"><a href="#一、Java-基础语法-关键字" class="headerlink" title="一、Java 基础语法 &amp; 关键字"></a>一、Java 基础语法 &amp; 关键字</h2><h2 id="1-JDK、JRE-和-JVM-的区别"><a href="#1-JDK、JRE-和-JVM-的区别" class="headerlink" title="1. JDK、JRE 和 JVM 的区别"></a>1. JDK、JRE 和 JVM 的区别</h2><ul>
+<li><strong>JVM（Java Virtual Machine）</strong>：Java 虚拟机，负责执行字节码（<code>.class</code>）。提供类加载、字节码校验、内存管理（堆、方法区）、执行引擎、垃圾回收、线程调度等。是抽象的规范，具体由不同厂商实现（HotSpot、OpenJ9 等）。</li>
+<li><strong>JRE（Java Runtime Environment）</strong>：运行环境，包含 JVM、核心类库（rt.jar 或 modules）、以及运行时需要的其它资源。用于运行 Java 程序。</li>
+<li><strong>JDK（Java Development Kit）</strong>：开发工具包，包含 JRE + 开发工具（<code>javac</code>、<code>jar</code>、<code>javadoc</code>、调试工具等）。用于开发 Java 程序。<br> 总结：JDK ⊃ JRE ⊃ JVM（JDK 包含 JRE，JRE 包含 JVM）。</li>
+</ul>
+<hr>
+<h2 id="2-Java-的跨平台原理是什么？"><a href="#2-Java-的跨平台原理是什么？" class="headerlink" title="2. Java 的跨平台原理是什么？"></a>2. Java 的跨平台原理是什么？</h2><ul>
+<li>Java 程序先由 <code>javac</code> 编译成与平台无关的 <strong>字节码</strong>（<code>.class</code>）。字节码不是机器码，而是供 JVM 执行的指令集。</li>
+<li>每个平台（Windows&#x2F;Linux&#x2F;macOS）有相应的 JVM 实现，JVM 把字节码翻译成该平台的机器指令（通过解释器、JIT 编译器等）。因此同一套 <code>.class</code> 可以在不同平台的 JVM 上运行 —— “一次编写，处处运行”（Write Once, Run Anywhere）。</li>
+<li>其它保证跨平台的要点：标准库隐藏平台差异（I&#x2F;O、线程等），需避免使用与平台绑定的本地代码（JNI）。</li>
+</ul>
+<hr>
+<h2 id="3-Java-的基本数据类型有哪些？各自的默认值？"><a href="#3-Java-的基本数据类型有哪些？各自的默认值？" class="headerlink" title="3. Java 的基本数据类型有哪些？各自的默认值？"></a>3. Java 的基本数据类型有哪些？各自的默认值？</h2><p>8 种基本类型及默认值（成员变量&#x2F;数组元素；局部变量无默认值必须初始化）：</p>
+<ul>
+<li><code>byte</code>：1 byte，默认值 <code>0</code></li>
+<li><code>short</code>：2 bytes，默认值 <code>0</code></li>
+<li><code>int</code>：4 bytes，默认值 <code>0</code></li>
+<li><code>long</code>：8 bytes，默认值 <code>0L</code></li>
+<li><code>float</code>：4 bytes，默认值 <code>0.0f</code></li>
+<li><code>double</code>：8 bytes，默认值 <code>0.0d</code></li>
+<li><code>char</code>：2 bytes（UTF-16 code unit），默认值 <code>&#39;\u0000&#39;</code>（即 0）</li>
+<li><code>boolean</code>：JVM 语义上用 1 bit 表示，默认值 <code>false</code></li>
+</ul>
+<p>另外，<strong>引用类型</strong>（对象、数组等）的默认值是 <code>null</code>。</p>
+<hr>
+<h2 id="4-byte、short、int、long-各占多少字节？"><a href="#4-byte、short、int、long-各占多少字节？" class="headerlink" title="4. byte、short、int、long 各占多少字节？"></a>4. <code>byte</code>、<code>short</code>、<code>int</code>、<code>long</code> 各占多少字节？</h2><ul>
+<li><code>byte</code>：<strong>1 字节</strong>（8 位）</li>
+<li><code>short</code>：<strong>2 字节</strong>（16 位）</li>
+<li><code>int</code>：<strong>4 字节</strong>（32 位）</li>
+<li><code>long</code>：<strong>8 字节</strong>（64 位）</li>
+</ul>
+<p>（上述为 Java 语言规范定义，与平台无关。）</p>
+<hr>
+<h2 id="5-float-和-double-的区别？"><a href="#5-float-和-double-的区别？" class="headerlink" title="5. float 和 double 的区别？"></a>5. <code>float</code> 和 <code>double</code> 的区别？</h2><ul>
+<li>精度与存储：<ul>
+<li><code>float</code>：32 位单精度浮点（IEEE 754），约 6~7 位有效数字。</li>
+<li><code>double</code>：64 位双精度浮点（IEEE 754），约 15~16 位有效数字。</li>
+</ul>
+</li>
+<li>精度更高的 <code>double</code> 更常用；<code>float</code> 用于节省内存或与特定 API（如图形库）兼容。</li>
+<li>注意：浮点数有精度误差，不适合做精确货币计算（应使用 <code>BigDecimal</code>）。</li>
+<li>默认浮点字面量为 <code>double</code>（例如 <code>1.2</code> 是 <code>double</code>，写成 <code>1.2f</code> 才是 <code>float</code>）。</li>
+</ul>
+<hr>
+<h2 id="6-char-类型占几个字节？能存汉字吗？"><a href="#6-char-类型占几个字节？能存汉字吗？" class="headerlink" title="6. char 类型占几个字节？能存汉字吗？"></a>6. <code>char</code> 类型占几个字节？能存汉字吗？</h2><ul>
+<li><code>char</code> 占 <strong>2 字节</strong>（16 位），表示 UTF-16 的一个 code unit。</li>
+<li>能否存汉字：多数常用汉字（位于基本多文种平面 BMP）可以用单个 <code>char</code> 表示（例如 <code>&#39;你&#39;</code>）；但有些罕见汉字或 emoji 属于补充平面（Supplementary Planes），它们需要 <strong>两个 char（称为 surrogate pair）</strong> 来表示。</li>
+<li>因此，单个 <code>char</code> 能表示一个 UTF-16 code unit，而不是完整的 Unicode code point。处理 Unicode 字符时注意使用 <code>int codePoint</code> &#x2F; <code>Character</code> 的相关 API。</li>
+</ul>
+<hr>
+<h2 id="7-自动装箱（autoboxing）和拆箱（unboxing）的原理是什么？"><a href="#7-自动装箱（autoboxing）和拆箱（unboxing）的原理是什么？" class="headerlink" title="7. 自动装箱（autoboxing）和拆箱（unboxing）的原理是什么？"></a>7. 自动装箱（autoboxing）和拆箱（unboxing）的原理是什么？</h2><ul>
+<li><p><strong>概念</strong>：</p>
+<ul>
+<li>装箱：把基本类型自动转换成对应的包装类型（如 <code>int</code> → <code>Integer</code>）。</li>
+<li>拆箱：把包装类型自动转换回基本类型（如 <code>Integer</code> → <code>int</code>）。</li>
+</ul>
+</li>
+<li><p><strong>编译器行为</strong>：自动装箱&#x2F;拆箱是在编译期由 Java 编译器插入对应的调用，示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Integer a = 10;        // 编译器会转换为 Integer.valueOf(10)</span><br><span class="line">int b = a;             // 编译器会转换为 a.intValue()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>valueOf 缓存</strong>：包装类（如 <code>Integer.valueOf(int)</code>）会对小整数（默认 -128 到 127）做缓存以重用对象，减少频繁创建对象。</p>
+</li>
+<li><p><strong>注意事项</strong>：</p>
+<ul>
+<li><p>拆箱 <code>null</code> 会抛出 <code>NullPointerException</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Integer x = null;</span><br><span class="line">int y = x; // NPE</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>装箱&#x2F;拆箱会有性能开销（对象创建、装箱&#x2F;拆箱方法调用），在性能敏感场景尽量使用基本类型或手动优化。</p>
+</li>
+<li><p>比较时注意：<code>Integer a = 100; Integer b = 100; a==b</code> 在缓存范围内可能为 <code>true</code>，超出范围则通常为 <code>false</code>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="8-和-equals-的区别？"><a href="#8-和-equals-的区别？" class="headerlink" title="8. == 和 equals() 的区别？"></a>8. <code>==</code> 和 <code>equals()</code> 的区别？</h2><ul>
+<li><strong>&#x3D;&#x3D;</strong>：<ul>
+<li>对于基本类型：比较 <strong>值</strong>（数值是否相等）。</li>
+<li>对于引用类型：比较 <strong>引用地址</strong>（是否是同一个对象）。</li>
+</ul>
+</li>
+<li><strong>equals()</strong>：<ul>
+<li>是 <code>Object</code> 的方法，默认实现也是比较引用（等价于 <code>==</code>）。</li>
+<li>许多类（如 <code>String</code>、<code>Integer</code>、集合类等）重写了 <code>equals()</code>，用于比较<strong>逻辑&#x2F;内容相等</strong>。</li>
+</ul>
+</li>
+<li><strong>使用建议</strong>：<ul>
+<li>比较对象内容用 <code>equals()</code>（需检查 <code>null</code>），比较是否同一实例用 <code>==</code>。</li>
+<li>与 <code>equals()</code> 配套应重写 <code>hashCode()</code>（见下题）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="9-hashCode-和-equals-的关系？"><a href="#9-hashCode-和-equals-的关系？" class="headerlink" title="9. hashCode 和 equals 的关系？"></a>9. <code>hashCode</code> 和 <code>equals</code> 的关系？</h2><ul>
+<li><strong>合同（Contract）</strong>（重要）：<ol>
+<li>如果两个对象通过 <code>equals()</code> 被判定为相等（<code>a.equals(b)</code> 为 <code>true</code>），那么 <code>a.hashCode() == b.hashCode()</code> 必须成立。</li>
+<li>反之不要求：<code>hashCode</code> 相等的对象不一定 <code>equals()</code> 相等（哈希冲突允许）。</li>
+</ol>
+</li>
+<li><strong>在哈希集合中的角色</strong>：<ul>
+<li>哈希表（<code>HashMap</code>&#x2F;<code>HashSet</code>）先用 <code>hashCode()</code> 找到桶（bucket），若桶中有多个元素，再用 <code>equals()</code> 逐个比较确认相等或冲突。</li>
+<li>如果只重写 <code>equals()</code> 而不重写 <code>hashCode()</code> 会破坏集合行为（例如放入 <code>HashSet</code> 后无法正确查找）。</li>
+</ul>
+</li>
+<li><strong>实现要点</strong>：<ul>
+<li><code>hashCode()</code> 要尽量分散（降低冲突），并在对象不可变字段上基于相同规则计算。</li>
+<li>若对象可变，若用于哈希集合要小心：修改字段会导致 <code>hashCode()</code> 改变，破坏集合内部结构。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="10-String、StringBuffer、StringBuilder-的区别？"><a href="#10-String、StringBuffer、StringBuilder-的区别？" class="headerlink" title="10. String、StringBuffer、StringBuilder 的区别？"></a>10. <code>String</code>、<code>StringBuffer</code>、<code>StringBuilder</code> 的区别？</h2><ul>
+<li><strong>String</strong>：<ul>
+<li>不可变（immutable），每次修改都会产生新的对象（或新内部 char&#x2F;byte 数组）。</li>
+<li>线程安全（因为不可变），适合频繁读取、少量修改的场景。</li>
+</ul>
+</li>
+<li><strong>StringBuffer</strong>：<ul>
+<li>可变的字符序列（内部有缓冲区 <code>char[]</code>&#x2F;<code>byte[]</code>），几乎与 <code>StringBuilder</code> 接口相同。</li>
+<li><strong>线程安全</strong>，其方法大多使用 <code>synchronized</code>，因此在多线程下可以被多个线程安全使用。</li>
+<li>相对较慢（同步开销）。</li>
+</ul>
+</li>
+<li><strong>StringBuilder（Java 5+）</strong>：<ul>
+<li>可变，<strong>非线程安全</strong>（没有同步），比 <code>StringBuffer</code> 快。</li>
+<li>推荐在单线程或外部已同步的场景下使用。</li>
+</ul>
+</li>
+<li><strong>选择建议</strong>：<ul>
+<li>多线程需要可变字符串：<code>StringBuffer</code>（或外部同步）。</li>
+<li>单线程&#x2F;局部构造字符串：<code>StringBuilder</code>。</li>
+<li>常量字符串或少量拼接：<code>String</code>（编译器对 <code>+</code> 会优化为 <code>StringBuilder</code>）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="11-为什么-String-是不可变的（immutable）？"><a href="#11-为什么-String-是不可变的（immutable）？" class="headerlink" title="11. 为什么 String 是不可变的（immutable）？"></a>11. 为什么 <code>String</code> 是不可变的（immutable）？</h2><p>原因（几条重要理由）：</p>
+<ol>
+<li><strong>安全性</strong>：<code>String</code> 经常用于关键场景（类加载器、网络地址、文件名、权限检查、数据库连接字符串等）。不可变保证在传递引用时不被恶意或意外修改。</li>
+<li><strong>线程安全</strong>：不可变对象固有线程安全，多个线程可共享同一 <code>String</code> 实例而无需同步。</li>
+<li><strong>性能（缓存 hashCode）</strong>：<code>String</code> 的哈希值可缓存（<code>hash</code> 字段），便于作为 Map 的 key，避免重复计算。</li>
+<li><strong>字符串常量池</strong>：可安全地将字面量放入池中重用，不用复制或担心修改。</li>
+<li><strong>优化</strong>：JVM 可进行共享、常量折叠等优化（更易于实现某些编译期&#x2F;运行期优化）。</li>
+</ol>
+<hr>
+<h2 id="12-String-常量池的实现机制？"><a href="#12-String-常量池的实现机制？" class="headerlink" title="12. String 常量池的实现机制？"></a>12. <code>String</code> 常量池的实现机制？</h2><ul>
+<li><strong>概念</strong>：编译期和运行期维护一个字符串池（String Intern Pool），用于存放字符串字面量（literal）和显式 <code>intern()</code> 后的字符串，以便重用相同内容的 <code>String</code> 实例。</li>
+<li><strong>编译期</strong>：源代码中的字符串字面量（如 <code>&quot;abc&quot;</code>）会被放到常量池（编译后的 class 文件常量池），类加载后这些字面量会放入运行时的字符串池。</li>
+<li><strong>运行期</strong>：<ul>
+<li>以前（Java 6 及更早）：字符串常量池在 PermGen（方法区）中。</li>
+<li>Java 7 起：常量池迁移到 Java 堆（运行时常量池也在堆里），避免 PermGen 问题。</li>
+</ul>
+</li>
+<li><strong>intern()</strong>：当调用 <code>s.intern()</code> 时，JVM 会检查池中是否已有相同内容的字符串：<ul>
+<li>若存在，返回池中的引用；</li>
+<li>若不存在，将该字符串的引用加入池并返回它。</li>
+</ul>
+</li>
+<li><strong>编译时优化</strong>：字符串常量的拼接（编译时常量）会在编译期合并，如 <code>&quot;a&quot; + &quot;b&quot;</code> → <code>&quot;ab&quot;</code>，直接放入常量池；而运行时拼接（变量参与）则使用 <code>StringBuilder</code>。</li>
+</ul>
+<hr>
+<h2 id="13-new-String-abc-创建了几个对象？"><a href="#13-new-String-abc-创建了几个对象？" class="headerlink" title="13. new String(&quot;abc&quot;) 创建了几个对象？"></a>13. <code>new String(&quot;abc&quot;)</code> 创建了几个对象？</h2><ul>
+<li><strong>通常情形</strong>：<ul>
+<li>若 <code>&quot;abc&quot;</code> 字面量尚未在常量池中存在，执行 <code>new String(&quot;abc&quot;)</code> 会导致 <strong>两个对象</strong> 被创建：常量池中的 <code>&quot;abc&quot;</code>（一个 <code>String</code>）和堆中通过 <code>new</code> 创建的新的 <code>String</code> 实例（内容通常是对常量池中字符数组的复制或共享，具体实现随 Java 版本而异）。</li>
+<li>如果字面量 <code>&quot;abc&quot;</code> 已经存在于常量池中（例如之前被加载过），那么 <code>new String(&quot;abc&quot;)</code> 只会创建 <strong>一个堆对象</strong>（new 的那个 <code>String</code>）。</li>
+</ul>
+</li>
+<li><strong>注意</strong>：自 Java 7&#x2F;9 后 <code>String</code> 内部实现改变（压缩字符串、byte[] 存储等），但逻辑上上述结论成立：通常 1 或 2 个对象，取决于常量池中是否已存在该字面量。</li>
+</ul>
+<hr>
+<h2 id="14-final-关键字的作用？"><a href="#14-final-关键字的作用？" class="headerlink" title="14. final 关键字的作用？"></a>14. <code>final</code> 关键字的作用？</h2><ul>
+<li><strong>用于类（final class）</strong>：类不可被继承（如 <code>String</code>）。</li>
+<li><strong>用于方法（final 方法）</strong>：方法不能被子类重写（override），用于确保行为不可变。</li>
+<li><strong>用于变量（final 字段&#x2F;局部变量）</strong>：<ul>
+<li>对基本类型：赋值后值不可改变（常量）。</li>
+<li>对引用类型：引用不可改变（不能指向另一个对象），但所指向对象的内部状态仍可变（除非对象本身不可变）。</li>
+<li><code>static final</code> 常用来定义常量（编译期常量）。</li>
+</ul>
+</li>
+<li><strong>用于参数</strong>（方法形参可以声明为 <code>final</code>）：代表方法内不能修改该参数引用&#x2F;值。</li>
+<li><strong>其它用途</strong>：在多线程中，<code>final</code> 字段的写-构造过程被 JMM（Java 内存模型）处理，确保构造完成后其他线程可见（安全发布方面有好处）。</li>
+</ul>
+<hr>
+<h2 id="15-static-关键字的作用？"><a href="#15-static-关键字的作用？" class="headerlink" title="15. static 关键字的作用？"></a>15. <code>static</code> 关键字的作用？</h2><ul>
+<li>用于声明类级别成员（字段、方法、初始化块、嵌套类），不依赖实例。</li>
+<li><strong>static 变量</strong>：类变量，所有实例共享一份。内存中仅有一份副本。</li>
+<li><strong>static 方法</strong>：类方法，可通过 <code>ClassName.method()</code> 调用；不能直接访问非静态成员（因无 this）。</li>
+<li><strong>static 代码块</strong>：类加载时执行一次（用于静态初始化）。</li>
+<li><strong>static 嵌套类</strong>：可以声明为静态的内部类（静态嵌套类），没有外部实例引用。</li>
+</ul>
+<hr>
+<h2 id="16-static-修饰变量、方法、代码块分别意味着什么？"><a href="#16-static-修饰变量、方法、代码块分别意味着什么？" class="headerlink" title="16. static 修饰变量、方法、代码块分别意味着什么？"></a>16. <code>static</code> 修饰变量、方法、代码块分别意味着什么？</h2><ul>
+<li><strong>static 变量（类变量）</strong>：<ul>
+<li>随类加载而创建，所有对象共享同一份数据。</li>
+<li>可通过 <code>ClassName.field</code> 或 <code>instance.field</code>（不推荐）访问。</li>
+</ul>
+</li>
+<li><strong>static 方法</strong>：<ul>
+<li>属于类，调用时无需实例。</li>
+<li>不能使用 <code>this</code>、不能直接访问非静态成员。</li>
+<li>可作为工具方法（如 <code>Math.abs()</code>）。</li>
+</ul>
+</li>
+<li><strong>static 代码块</strong>：<ul>
+<li>在类加载阶段执行一次，用于复杂静态初始化（比如初始化静态常量、加载本地库等）。</li>
+<li>执行顺序：静态块按定义顺序执行，类加载时运行（在实例化之前）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="17-static-和-final-能一起用吗？"><a href="#17-static-和-final-能一起用吗？" class="headerlink" title="17. static 和 final 能一起用吗？"></a>17. <code>static</code> 和 <code>final</code> 能一起用吗？</h2><ul>
+<li><p><strong>能</strong>。<code>static final</code> 常用于定义类常量（尤其是基本类型和 <code>String</code>），例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static final int MAX = 100;</span><br><span class="line">public static final String NAME = &quot;abc&quot;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>区别</strong>：</p>
+<ul>
+<li>如果是编译期常量（<code>static final</code> 基本类型或 <code>String</code> 且在编译时可以确定），编译器会将其内联到使用处（被引用的类编译后看到的是常量值），注意跨模块修改可能导致需要重新编译引用方。</li>
+<li>如果是 <code>static final</code> 引用对象且不是编译期常量，则引用本身不可变，但对象内容可能可变。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="18-static-内部类和非静态内部类的区别？"><a href="#18-static-内部类和非静态内部类的区别？" class="headerlink" title="18. static 内部类和非静态内部类的区别？"></a>18. <code>static</code> 内部类和非静态内部类的区别？</h2><ul>
+<li><strong>静态内部类（static nested class）</strong>：<ul>
+<li>相当于外部类的一个静态成员。</li>
+<li><strong>没有</strong>对外部类实例的隐式引用（不能直接访问外部类的非静态成员）。</li>
+<li>可以像普通类那样实例化：<code>Outer.StaticInner inner = new Outer.StaticInner();</code></li>
+</ul>
+</li>
+<li><strong>非静态内部类（inner class）</strong>：<ul>
+<li>每个实例隐式持有一个外部类实例引用（<code>Outer.this</code>），可以直接访问外部类的所有成员（包括私有成员）。</li>
+<li>创建方式：<code>Outer outer = new Outer(); Outer.Inner inner = outer.new Inner();</code></li>
+<li>占用外部类对象的内存引用，可能导致内存泄露（如果长期持有内部类实例导致外部类不能被回收）。</li>
+</ul>
+</li>
+<li><strong>选择原则</strong>：如果内部类不需要访问外部实例成员，优先使用 <code>static</code> 嵌套类，避免额外引用。</li>
+</ul>
+<hr>
+<h2 id="19-Java-中的-this-和-super-的区别？"><a href="#19-Java-中的-this-和-super-的区别？" class="headerlink" title="19. Java 中的 this 和 super 的区别？"></a>19. Java 中的 <code>this</code> 和 <code>super</code> 的区别？</h2><ul>
+<li><strong>this</strong>：<ul>
+<li>引用当前对象的引用。</li>
+<li>用于访问当前类的实例变量、调用当前类的其他构造器（<code>this(...)</code>）、或传递当前对象引用。</li>
+</ul>
+</li>
+<li><strong>super</strong>：<ul>
+<li>引用当前对象的父类部分。</li>
+<li>用于访问父类被覆盖的方法（<code>super.method()</code>）、父类字段（若有同名字段）、以及在子类构造器第一行调用父类构造器（<code>super(...)</code>）。</li>
+</ul>
+</li>
+<li><strong>注意</strong>：<ul>
+<li><code>this()</code> 或 <code>super()</code> 必须在构造器的第一行（两者不能同时出现）。</li>
+<li><code>super</code> 不能用于访问父类的 private 成员（编译期限制）。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="20-Java-中构造方法能否被重写？"><a href="#20-Java-中构造方法能否被重写？" class="headerlink" title="20. Java 中构造方法能否被重写？"></a>20. Java 中构造方法能否被重写？</h2><ul>
+<li><strong>不能</strong>。重写（override）适用于实例方法，构造方法不是继承的成员，子类不能重写父类的构造器。</li>
+<li><strong>可以重载（overload）</strong>：在同一类中同名构造器有不同参数列表属于重载。</li>
+<li>子类构造器可通过 <code>super(...)</code> 显式调用父类构造器来完成父类初始化。</li>
+</ul>
+<hr>
+<h2 id="21-接口和抽象类的区别？"><a href="#21-接口和抽象类的区别？" class="headerlink" title="21. 接口和抽象类的区别？"></a>21. 接口和抽象类的区别？</h2><ul>
+<li><strong>接口（interface）</strong>：<ul>
+<li>早期（Java 7 之前）：只包含抽象方法（默认是 <code>public abstract</code>）和 <code>public static final</code> 常量。</li>
+<li>Java 8+：可以包含 <code>default</code> 方法与 <code>static</code> 方法（可以有部分实现）；Java 9+ 允许 <code>private</code> 方法。</li>
+<li>支持多继承（一个类可以实现多个接口）。</li>
+<li>没有实例字段（除 <code>static final</code> 常量外）。</li>
+</ul>
+</li>
+<li><strong>抽象类（abstract class）</strong>：<ul>
+<li>可以有实例字段（非静态成员变量）、已有实现的方法（具体方法）、构造器。</li>
+<li>适合表示一类有共同行为并共享状态的类层次。</li>
+<li>类只能单继承（只能继承一个抽象类）。</li>
+</ul>
+</li>
+<li><strong>选择建议</strong>：<ul>
+<li>如果需要多继承行为、只定义方法契约且不需要状态，使用接口。</li>
+<li>如果需要提供共有实现和状态，使用抽象类。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="22-接口中可以有-default-方法和-static-方法吗？"><a href="#22-接口中可以有-default-方法和-static-方法吗？" class="headerlink" title="22. 接口中可以有 default 方法和 static 方法吗？"></a>22. 接口中可以有 <code>default</code> 方法和 <code>static</code> 方法吗？</h2><ul>
+<li><strong>可以（Java 8 起）</strong>。<ul>
+<li><code>default</code> 方法：为实现类提供默认实现，避免破坏已有实现（接口演化）。实现类可以覆盖（override）。</li>
+<li><code>static</code> 方法：属于接口自身，可以通过 <code>InterfaceName.method()</code> 调用，不能通过实例调用。</li>
+</ul>
+</li>
+<li>Java 9 及以后还可有 <code>private</code> 方法，供接口内部复用实现逻辑。</li>
+</ul>
+<hr>
+<h2 id="23-Java-8-接口新增了什么？"><a href="#23-Java-8-接口新增了什么？" class="headerlink" title="23. Java 8 接口新增了什么？"></a>23. Java 8 接口新增了什么？</h2><ul>
+<li>Java 8 在接口中新增了 <strong>default 方法</strong> 和 <strong>static 方法</strong>，允许接口提供带实现的方法，从而便于接口的演化（向后兼容）。这也是 Java 8 引入函数式编程支持的基础之一（允许接口作为函数式接口）。</li>
+</ul>
+<hr>
+<h2 id="24-Java-8-有什么新特性，并详细介绍（重点）"><a href="#24-Java-8-有什么新特性，并详细介绍（重点）" class="headerlink" title="24. Java 8 有什么新特性，并详细介绍（重点）"></a>24. Java 8 有什么新特性，并详细介绍（重点）</h2><hr>
+<h1 id="一、Java-8-新特性深入解析"><a href="#一、Java-8-新特性深入解析" class="headerlink" title="一、Java 8 新特性深入解析"></a>一、Java 8 新特性深入解析</h1><p>好的，我来帮你把 <strong>Java 8 的六大核心特性（Lambda、函数式接口、Stream API、方法引用、java.time API、Optional）</strong> 进行 <strong>完整整合</strong>，从概念、示例、底层原理、实现机制、特点和优势做一个统一、连贯的解析。</p>
+<hr>
+<h1 id="Java-8-六大核心特性整合解析"><a href="#Java-8-六大核心特性整合解析" class="headerlink" title="Java 8 六大核心特性整合解析"></a>Java 8 六大核心特性整合解析</h1><h2 id="1-Lambda-表达式"><a href="#1-Lambda-表达式" class="headerlink" title="1. Lambda 表达式"></a>1. Lambda 表达式</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>匿名函数，允许把行为作为参数传递。</li>
+<li>简化匿名内部类写法，实现函数式编程。</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;bb&quot;</span>, <span class="string">&quot;ccc&quot;</span>);</span><br><span class="line">Collections.sort(list, (s1, s2) -&gt; s1.length() - s2.length());</span><br></pre></td></tr></table></figure>
+
+<h3 id="底层原理"><a href="#底层原理" class="headerlink" title="底层原理"></a>底层原理</h3><ul>
+<li>编译器生成静态&#x2F;实例方法 + <code>invokedynamic</code> 指令。</li>
+<li>JVM 调用 <code>LambdaMetafactory</code> 动态生成函数对象，实现 <strong>函数式接口</strong>。</li>
+<li>捕获外部变量通过闭包机制存储（必须是 <code>effectively final</code>）。</li>
+</ul>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>语法简洁</li>
+<li>可作为参数传递行为</li>
+<li>性能高于匿名内部类（减少对象创建）</li>
+</ul>
+<hr>
+<h2 id="2-函数式接口"><a href="#2-函数式接口" class="headerlink" title="2. 函数式接口"></a>2. 函数式接口</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>仅有一个抽象方法的接口，用作 Lambda 表达式的目标类型。</li>
+<li>可用 <code>@FunctionalInterface</code> 标识。</li>
+</ul>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@FunctionalInterface</span><br><span class="line">interface Converter&lt;F, T&gt; &#123;</span><br><span class="line">    T convert(F from);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Converter&lt;String, Integer&gt; c = Integer::valueOf;</span><br><span class="line">System.out.println(c.convert(&quot;123&quot;)); // 123</span><br></pre></td></tr></table></figure>
+
+<h3 id="底层原理-1"><a href="#底层原理-1" class="headerlink" title="底层原理"></a>底层原理</h3><ul>
+<li>Lambda 表达式编译时生成实现函数式接口的函数对象。</li>
+<li>捕获变量通过闭包对象保存。</li>
+</ul>
+<h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>简化匿名类</li>
+<li>支持函数式编程</li>
+<li>可与 Stream &#x2F; Optional 等结合</li>
+</ul>
+<hr>
+<h2 id="3-Stream-API"><a href="#3-Stream-API" class="headerlink" title="3. Stream API"></a>3. Stream API</h2><h3 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>对集合进行声明式操作（过滤、映射、归约）。</li>
+<li>支持 <strong>惰性求值</strong> 和 <strong>并行处理</strong>。</li>
+</ul>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; names = Arrays.asList(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;);</span><br><span class="line">List&lt;String&gt; filtered = names.stream()</span><br><span class="line">    .filter(s -&gt; s.length() &gt; 3)</span><br><span class="line">    .map(String::toUpperCase)</span><br><span class="line">    .collect(Collectors.toList());</span><br><span class="line">System.out.println(filtered); // [ALICE, CHARLIE]</span><br></pre></td></tr></table></figure>
+
+<h3 id="底层原理-2"><a href="#底层原理-2" class="headerlink" title="底层原理"></a>底层原理</h3><ul>
+<li>Stream 是流水线对象，中间操作返回新的 Stream，终端操作触发计算。</li>
+<li>串行流：顺序迭代器处理</li>
+<li>并行流：ForkJoinPool 分块处理</li>
+</ul>
+<h3 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>声明式、链式操作</li>
+<li>支持并行</li>
+<li>可与 Lambda &#x2F; 方法引用结合</li>
+</ul>
+<hr>
+<h2 id="4-方法引用"><a href="#4-方法引用" class="headerlink" title="4. 方法引用"></a>4. 方法引用</h2><h3 id="概念-3"><a href="#概念-3" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>Lambda 表达式的简化写法，引用现有方法。</li>
+<li>类型：<ol>
+<li>静态方法引用：<code>ClassName::staticMethod</code></li>
+<li>实例方法引用：<code>instance::method</code></li>
+<li>构造器引用：<code>ClassName::new</code></li>
+</ol>
+</li>
+</ul>
+<h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; names = Arrays.asList(&quot;a&quot;, &quot;bb&quot;, &quot;ccc&quot;);</span><br><span class="line">names.forEach(System.out::println); // 实例方法引用</span><br><span class="line">Supplier&lt;List&lt;String&gt;&gt; listSupplier = ArrayList::new; // 构造器引用</span><br></pre></td></tr></table></figure>
+
+<h3 id="底层原理-3"><a href="#底层原理-3" class="headerlink" title="底层原理"></a>底层原理</h3><ul>
+<li>编译器转成 Lambda 表达式 + invokedynamic。</li>
+<li>JVM 生成实现函数式接口的函数对象，内部持有方法引用。</li>
+</ul>
+<h3 id="特点-3"><a href="#特点-3" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>简洁直观</li>
+<li>可减少 Lambda 代码</li>
+<li>与 Stream &#x2F; Optional 配合使用</li>
+</ul>
+<hr>
+<h2 id="5-java-time-API"><a href="#5-java-time-API" class="headerlink" title="5. java.time API"></a>5. java.time API</h2><h3 id="概念-4"><a href="#概念-4" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>替代 <code>Date</code> &#x2F; <code>Calendar</code>，不可变、线程安全。</li>
+<li>核心类：<ul>
+<li><code>LocalDate</code> &#x2F; <code>LocalTime</code> &#x2F; <code>LocalDateTime</code>（无时区）</li>
+<li><code>ZonedDateTime</code>（带时区）</li>
+<li><code>Duration</code> &#x2F; <code>Period</code>（时间段）</li>
+</ul>
+</li>
+</ul>
+<h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LocalDate today = LocalDate.now();</span><br><span class="line">LocalDate tomorrow = today.plusDays(1);</span><br><span class="line">ZonedDateTime zdt = ZonedDateTime.now(ZoneId.of(&quot;Asia/Singapore&quot;));</span><br><span class="line">System.out.println(tomorrow);</span><br><span class="line">System.out.println(zdt);</span><br></pre></td></tr></table></figure>
+
+<h3 id="底层原理-4"><a href="#底层原理-4" class="headerlink" title="底层原理"></a>底层原理</h3><ul>
+<li>内部字段 <code>final</code> 保存值，不可变。</li>
+<li>工厂方法创建对象，链式操作返回新对象。</li>
+<li>使用 enum + 整型&#x2F;字节优化存储（如 LocalDate 年月日用 int）。</li>
+</ul>
+<h3 id="特点-4"><a href="#特点-4" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>不可变，线程安全</li>
+<li>链式操作，易组合</li>
+<li>支持各种历法和时区计算</li>
+</ul>
+<hr>
+<h2 id="6-Optional"><a href="#6-Optional" class="headerlink" title="6. Optional"></a>6. Optional</h2><h3 id="概念-5"><a href="#概念-5" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>容器对象，防止 <code>NullPointerException</code>。</li>
+<li>可以包含值或为空（empty）。</li>
+</ul>
+<h3 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Optional&lt;String&gt; opt1 = Optional.of(&quot;Hello&quot;);</span><br><span class="line">Optional&lt;String&gt; opt2 = Optional.ofNullable(null);</span><br><span class="line"></span><br><span class="line">System.out.println(opt1.isPresent()); // true</span><br><span class="line">System.out.println(opt2.orElse(&quot;Default&quot;)); // Default</span><br><span class="line">opt1.map(String::toUpperCase).ifPresent(System.out::println); // HELLO</span><br></pre></td></tr></table></figure>
+
+<h3 id="底层原理-5"><a href="#底层原理-5" class="headerlink" title="底层原理"></a>底层原理</h3><ul>
+<li>内部 <code>value</code> 字段存储非空值，空值使用单例 <code>EMPTY</code>。</li>
+<li><code>map</code> &#x2F; <code>flatMap</code> &#x2F; <code>filter</code> 返回新的 Optional，对象不可变。</li>
+<li>与 Lambda &#x2F; 函数式接口结合实现链式安全操作。</li>
+</ul>
+<h3 id="特点-5"><a href="#特点-5" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>避免显式 null 判断</li>
+<li>支持链式调用</li>
+<li>可与 Stream &#x2F; Lambda 配合</li>
+</ul>
+<hr>
+<h2 id="Java-8-六大核心特性底层对比表"><a href="#Java-8-六大核心特性底层对比表" class="headerlink" title="Java 8 六大核心特性底层对比表"></a>Java 8 六大核心特性底层对比表</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>底层实现</th>
+<th>核心原理</th>
+<th>优势</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lambda</td>
+<td>invokedynamic + LambdaMetafactory</td>
+<td>动态生成函数对象</td>
+<td>简洁、性能高</td>
+</tr>
+<tr>
+<td>函数式接口</td>
+<td>单抽象方法接口</td>
+<td>捕获变量通过闭包存储</td>
+<td>简化匿名类，函数式编程</td>
+</tr>
+<tr>
+<td>Stream API</td>
+<td>流水线 + 延迟求值</td>
+<td>中间操作惰性，终端触发</td>
+<td>声明式、可并行</td>
+</tr>
+<tr>
+<td>方法引用</td>
+<td>Lambda 简化语法 + invokedynamic</td>
+<td>内部持有方法引用</td>
+<td>简洁直观，减少代码</td>
+</tr>
+<tr>
+<td>java.time</td>
+<td>不可变对象 + 工厂方法</td>
+<td>final字段保存值，链式返回新对象</td>
+<td>线程安全，可组合</td>
+</tr>
+<tr>
+<td>Optional</td>
+<td>包装对象 + 单例 EMPTY</td>
+<td>不可变容器，函数式链式调用</td>
+<td>避免 NPE，安全链式操作</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="1-Lambda-表达式-1"><a href="#1-Lambda-表达式-1" class="headerlink" title="1. Lambda 表达式"></a>1. Lambda 表达式</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(parameters) -&gt; expression</span><br><span class="line">(parameters) -&gt; &#123; statements; &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="示例：排序"><a href="#示例：排序" class="headerlink" title="示例：排序"></a>示例：排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; names = Arrays.asList(<span class="string">&quot;Alice&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Charlie&quot;</span>);</span><br><span class="line"><span class="comment">// 传统匿名类写法</span></span><br><span class="line">Collections.sort(names, <span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;String&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(String s1, String s2)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> s1.length() - s2.length();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// Lambda 写法</span></span><br><span class="line">Collections.sort(names, (s1, s2) -&gt; s1.length() - s2.length());</span><br></pre></td></tr></table></figure>
+
+<h3 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">编译器把 Lambda 转成匿名类或 invokedynamic 机制</span><br><span class="line">+----------------+</span><br><span class="line">|   Lambda 表达式  |</span><br><span class="line">+----------------+</span><br><span class="line">        |</span><br><span class="line">        v</span><br><span class="line">+----------------+</span><br><span class="line">|  JVM runtime   |</span><br><span class="line">|  invokedynamic |</span><br><span class="line">+----------------+</span><br><span class="line">        |</span><br><span class="line">        v</span><br><span class="line">+----------------+</span><br><span class="line">| Function Object|</span><br><span class="line">+----------------+</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>捕获外部变量</strong>：必须是 <code>effectively final</code>，底层通过匿名类的构造器保存引用或值。</li>
+</ul>
+<hr>
+<h2 id="2-Stream-API"><a href="#2-Stream-API" class="headerlink" title="2. Stream API"></a>2. Stream API</h2><h3 id="特点-6"><a href="#特点-6" class="headerlink" title="特点"></a>特点</h3><ol>
+<li><strong>声明式</strong>：关注“做什么”，而非“怎么做”。</li>
+<li><strong>惰性求值</strong>：中间操作不会立即执行，终端操作触发。</li>
+<li><strong>可并行</strong>：使用 <code>.parallelStream()</code> 自动利用多核 CPU。</li>
+</ol>
+<h3 id="示例：数据处理"><a href="#示例：数据处理" class="headerlink" title="示例：数据处理"></a>示例：数据处理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; words = Arrays.asList(<span class="string">&quot;Java&quot;</span>,<span class="string">&quot;Python&quot;</span>,<span class="string">&quot;C++&quot;</span>,<span class="string">&quot;Go&quot;</span>);</span><br><span class="line">List&lt;String&gt; filtered = words.stream()</span><br><span class="line">    .filter(s -&gt; s.length() &gt; <span class="number">2</span>)</span><br><span class="line">    .map(String::toUpperCase)</span><br><span class="line">    .sorted()</span><br><span class="line">    .collect(Collectors.toList());</span><br><span class="line">System.out.println(filtered); <span class="comment">// [C++, JAVA, PYTHON]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="图示-1"><a href="#图示-1" class="headerlink" title="图示"></a>图示</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List -&gt; Stream -&gt; filter -&gt; map -&gt; sorted -&gt; collect</span><br><span class="line">   |        |        |      |           |</span><br><span class="line">   v        v        v      v           v</span><br><span class="line">   数据流   中间操作  中间操作  中间操作   终端操作</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-方法引用"><a href="#3-方法引用" class="headerlink" title="3. 方法引用"></a>3. 方法引用</h2><h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><ol>
+<li><strong>静态方法</strong>：<code>Class::staticMethod</code></li>
+<li><strong>实例方法</strong>：<code>instance::method</code></li>
+<li><strong>构造器</strong>：<code>Class::new</code></li>
+</ol>
+<h3 id="示例-6"><a href="#示例-6" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; names = Arrays.asList(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;bb&quot;</span>, <span class="string">&quot;ccc&quot;</span>);</span><br><span class="line">names.forEach(System.out::println); <span class="comment">// 实例方法引用</span></span><br><span class="line">Supplier&lt;List&lt;String&gt;&gt; listSupplier = ArrayList::<span class="keyword">new</span>; <span class="comment">// 构造器引用</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-java-time-API"><a href="#4-java-time-API" class="headerlink" title="4. java.time API"></a>4. java.time API</h2><h3 id="示例-7"><a href="#示例-7" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">LocalDate</span> <span class="variable">date</span> <span class="operator">=</span> LocalDate.of(<span class="number">2025</span>, <span class="number">9</span>, <span class="number">10</span>);</span><br><span class="line"><span class="type">LocalDate</span> <span class="variable">tomorrow</span> <span class="operator">=</span> date.plusDays(<span class="number">1</span>);</span><br><span class="line">System.out.println(tomorrow); <span class="comment">// 2025-09-11</span></span><br><span class="line"></span><br><span class="line"><span class="type">ZonedDateTime</span> <span class="variable">zdt</span> <span class="operator">=</span> ZonedDateTime.now(ZoneId.of(<span class="string">&quot;Asia/Singapore&quot;</span>));</span><br><span class="line">System.out.println(zdt);</span><br></pre></td></tr></table></figure>
+
+<h3 id="图示-2"><a href="#图示-2" class="headerlink" title="图示"></a>图示</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">LocalDate/Time (不可变)</span><br><span class="line">  |-- plusDays()</span><br><span class="line">  |-- minusMonths()</span><br><span class="line">  |-- withDayOfMonth()</span><br><span class="line">  v</span><br><span class="line">新的 LocalDate/Time 对象</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>线程安全</strong>：无需同步即可共享对象。</li>
+</ul>
+<hr>
+<h2 id="5-Optional"><a href="#5-Optional" class="headerlink" title="5. Optional"></a>5. Optional</h2><h3 id="示例-8"><a href="#示例-8" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Optional&lt;String&gt; opt = Optional.ofNullable(<span class="literal">null</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> opt.orElse(<span class="string">&quot;默认值&quot;</span>);</span><br><span class="line">System.out.println(result); <span class="comment">// 默认值</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="图示-3"><a href="#图示-3" class="headerlink" title="图示"></a>图示</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Optional.ofNullable(value)</span><br><span class="line">    |</span><br><span class="line">    v</span><br><span class="line">+-----------------+</span><br><span class="line">| value != <span class="literal">null</span> ? |</span><br><span class="line">|  contains value |</span><br><span class="line">|  <span class="keyword">else</span> empty()   |</span><br><span class="line">+-----------------+</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="二、synchronized-底层原理深入解析"><a href="#二、synchronized-底层原理深入解析" class="headerlink" title="二、synchronized 底层原理深入解析"></a>二、synchronized 底层原理深入解析</h1><h2 id="1-JVM-锁的类型"><a href="#1-JVM-锁的类型" class="headerlink" title="1. JVM 锁的类型"></a>1. JVM 锁的类型</h2><table>
+<thead>
+<tr>
+<th>锁类型</th>
+<th>特点</th>
+<th>性能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>偏向锁 (Biased Lock)</td>
+<td>无竞争时偏向第一个线程，轻量</td>
+<td>高</td>
+</tr>
+<tr>
+<td>轻量级锁 (Lightweight)</td>
+<td>竞争少时使用 CAS 升级锁</td>
+<td>中</td>
+</tr>
+<tr>
+<td>重量级锁 (Monitor)</td>
+<td>高竞争时使用 OS mutex，阻塞线程</td>
+<td>低</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="2-synchronized-对象头结构"><a href="#2-synchronized-对象头结构" class="headerlink" title="2. synchronized 对象头结构"></a>2. synchronized 对象头结构</h2><ul>
+<li>每个对象在 JVM 内存中都有 <strong>对象头（Mark Word）</strong>，存储锁信息、哈希码、GC 标记等。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">对象头 Mark Word (32/64bit)</span><br><span class="line">+----------------+----------------+----------------+</span><br><span class="line">| HashCode       | GC info        | Lock info      |</span><br><span class="line">+----------------+----------------+----------------+</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>锁标记位</strong>：<ul>
+<li>00：无锁</li>
+<li>01：偏向锁</li>
+<li>10：轻量级锁</li>
+<li>11：重量级锁</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-synchronized-执行流程"><a href="#3-synchronized-执行流程" class="headerlink" title="3. synchronized 执行流程"></a>3. synchronized 执行流程</h2><h3 id="a-偏向锁（无竞争）"><a href="#a-偏向锁（无竞争）" class="headerlink" title="a) 偏向锁（无竞争）"></a>a) 偏向锁（无竞争）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">线程获取锁 -&gt; 在对象头打上线程ID -&gt; 执行 -&gt; 释放锁 -&gt; 保持偏向状态</span><br></pre></td></tr></table></figure>
+
+<h3 id="b-轻量级锁（CAS竞争）"><a href="#b-轻量级锁（CAS竞争）" class="headerlink" title="b) 轻量级锁（CAS竞争）"></a>b) 轻量级锁（CAS竞争）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">线程尝试CAS抢锁 -&gt; 成功：持有锁 -&gt; 执行 -&gt; 释放</span><br><span class="line">                      |-&gt; 失败：升级为重量级锁</span><br></pre></td></tr></table></figure>
+
+<h3 id="c-重量级锁（阻塞）"><a href="#c-重量级锁（阻塞）" class="headerlink" title="c) 重量级锁（阻塞）"></a>c) 重量级锁（阻塞）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">线程无法获取锁 -&gt; 阻塞（OS等待队列） -&gt; 被唤醒 -&gt; 获取锁 -&gt; 执行 -&gt; 释放锁</span><br></pre></td></tr></table></figure>
+
+<h3 id="图示-4"><a href="#图示-4" class="headerlink" title="图示"></a>图示</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+------------------+</span><br><span class="line">|  synchronized()  |</span><br><span class="line">+------------------+</span><br><span class="line">          |</span><br><span class="line">    JVM对象头Mark Word</span><br><span class="line">          |</span><br><span class="line">+------------------------+</span><br><span class="line">| 偏向锁 -&gt; 轻量级锁 -&gt; 重量级锁</span><br><span class="line">+------------------------+</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-synchronized-方法示例"><a href="#4-synchronized-方法示例" class="headerlink" title="4. synchronized 方法示例"></a>4. synchronized 方法示例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Counter &#123;</span><br><span class="line">    private int count = 0;</span><br><span class="line"></span><br><span class="line">    public synchronized void increment() &#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getCount() &#123;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>锁对象</strong>：实例方法锁住 <code>this</code>，静态方法锁住类对象 <code>ClassName.class</code>。</li>
+<li><strong>效果</strong>：同一时间只有一个线程能进入 <code>increment()</code>，保证 <code>count++</code> 操作的原子性。</li>
+</ul>
+<hr>
+<h2 id="5-JVM-优化"><a href="#5-JVM-优化" class="headerlink" title="5. JVM 优化"></a>5. JVM 优化</h2><ul>
+<li><strong>锁消除</strong>：编译器或 JIT 可检测无竞争情况，消除同步锁。</li>
+<li><strong>锁粗化</strong>：把多次连续的小范围锁合并，减少加锁次数。</li>
+<li><strong>偏向锁 &#x2F; 轻量级锁 &#x2F; 重量级锁升级</strong>：动态适应竞争情况，兼顾性能与正确性。</li>
+</ul>
+<hr>
+<p>如果你愿意，我可以帮你把 <strong>Java 8 新特性</strong> 和 <strong>synchronized 底层原理</strong> 做一张 <strong>图解全流程总结图</strong>，把 Lambda、Stream、锁状态、对象头等内容融合成一张直观的图，方便记忆和面试答题。</p>
+<p>你希望我做这张图吗？25. 多态的实现机制是什么？</p>
+<ul>
+<li><strong>概念</strong>：同一操作作用于不同对象时表现出不同的行为（主要表现为方法的动态绑定）。</li>
+<li><strong>实现机制</strong>：<ul>
+<li><strong>编译时</strong>：根据引用类型检查方法签名（静态类型检查）。</li>
+<li><strong>运行时</strong>：实际调用的方法根据对象的实际类型（运行时类型）决定；即 <strong>动态绑定（dynamic dispatch）</strong>。</li>
+<li>JVM 通常通过 <strong>虚方法表（vtable）&#x2F;方法查找机制</strong> 实现。调用一个非 <code>static</code>、非 <code>private</code>、非 <code>final</code> 的方法时，会在运行时查找实际类的实现并调用。</li>
+</ul>
+</li>
+<li><strong>结果</strong>：子类可以覆盖父类方法，调用者使用父类引用指向子类对象时，调用的是子类的覆盖方法（运行时决定）。</li>
+<li><strong>注意</strong>：<code>static</code>、<code>private</code>、<code>final</code> 方法不会被动态绑定（是静态绑定）。</li>
+</ul>
+<hr>
+<h2 id="26-方法重载（overload）和方法重写（override）的区别？"><a href="#26-方法重载（overload）和方法重写（override）的区别？" class="headerlink" title="26. 方法重载（overload）和方法重写（override）的区别？"></a>26. 方法重载（overload）和方法重写（override）的区别？</h2><ul>
+<li><p><strong>方法重载（Overloading）</strong>：</p>
+<ul>
+<li>同一类中方法名相同、参数列表不同（参数类型&#x2F;个数&#x2F;顺序），返回类型可以不同。</li>
+<li>编译时决定（重载解析在编译期完成），与继承关系无关。</li>
+</ul>
+</li>
+<li><p><strong>方法重写（Overriding）</strong>：</p>
+<ul>
+<li>子类定义与父类相同方法签名（方法名 + 参数类型相同）的实现，目的是改变&#x2F;扩展父类行为。</li>
+<li>运行时动态绑定，必须满足访问权限不能更严格，抛出的受检异常不能超过父类版本等规则。</li>
+</ul>
+</li>
+<li><p><strong>示例</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// overload</span><br><span class="line">void f(int x) &#123;&#125;</span><br><span class="line">void f(String s) &#123;&#125;</span><br><span class="line">// override</span><br><span class="line">class A &#123; void m() &#123;&#125; &#125;</span><br><span class="line">class B extends A &#123; @Override void m() &#123;&#125; &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="27-Java-支持多继承吗？如何实现类似效果？"><a href="#27-Java-支持多继承吗？如何实现类似效果？" class="headerlink" title="27. Java 支持多继承吗？如何实现类似效果？"></a>27. Java 支持多继承吗？如何实现类似效果？</h2><ul>
+<li><strong>类的多继承</strong>：Java <strong>不支持类的多继承</strong>（不能继承多个类），以避免菱形继承问题（diamond problem）。</li>
+<li><strong>实现类似效果的方法</strong>：<ul>
+<li><strong>接口多实现</strong>：一个类可以实现多个接口（Java 8 的 <code>default</code> 方法也带来类似多继承方法实现的可能，但有冲突解决规则）。</li>
+<li><strong>组合&#x2F;委托（composition&#x2F;delegation）</strong>：在类中持有其它类的实例并把调用委托给它们（优于继承的面向对象设计原则）。</li>
+</ul>
+</li>
+<li><strong>接口冲突解决</strong>：若多个接口提供相同默认方法，类必须重写该方法并明确调用哪个接口的默认实现（<code>InterfaceName.super.method()</code>）。</li>
+</ul>
+<hr>
+<h2 id="28-Java-的四种访问修饰符？"><a href="#28-Java-的四种访问修饰符？" class="headerlink" title="28. Java 的四种访问修饰符？"></a>28. Java 的四种访问修饰符？</h2><ul>
+<li><code>public</code>：对所有类可见（任何包）。</li>
+<li><code>protected</code>：对同包类和子类可见（即同包或子类可以访问）。</li>
+<li><strong>默认（包私有，package-private）</strong>（不写修饰符）：对同包类可见，包外不可见。</li>
+<li><code>private</code>：仅在本类内可见，包外&#x2F;子类不可访问（子类无法直接访问父类 private 成员）。</li>
+<li><strong>注意</strong>：对类（顶层类）只能使用 <code>public</code> 或默认（包私有），不能声明为 <code>private</code>&#x2F;<code>protected</code>。</li>
+</ul>
+<hr>
+<h2 id="29-transient-关键字的作用？"><a href="#29-transient-关键字的作用？" class="headerlink" title="29. transient 关键字的作用？"></a>29. <code>transient</code> 关键字的作用？</h2><ul>
+<li>用于标记字段在 Java 序列化（<code>Serializable</code>）过程中<strong>不被序列化</strong>。</li>
+<li>被标记为 <code>transient</code> 的字段在序列化后不会写入序列化流，反序列化时这些字段会以默认值恢复（基本类型 0，引用类型 <code>null</code>）。</li>
+<li>常用于敏感信息（密码）、不需要持久化的缓存字段、或可重建的状态字段。</li>
+<li>注意：<code>static</code> 字段本身也不会被序列化（因为是类级别，不属于实例状态）。</li>
+</ul>
+<hr>
+<h2 id="30-volatile-关键字的作用？"><a href="#30-volatile-关键字的作用？" class="headerlink" title="30. volatile 关键字的作用？"></a>30. <code>volatile</code> 关键字的作用？</h2><ul>
+<li><strong>可见性</strong>：保证对 <code>volatile</code> 变量的写入对其它线程立即可见（读取总是从主内存而不是线程缓存读取）。</li>
+<li><strong>禁止指令重排序（部分）</strong>：读&#x2F;写 <code>volatile</code> 存在的内存屏障能保证一定的有序性（写 <code>volatile</code> 发生在后续读的可见性上，更多细节参考 JMM）。</li>
+<li><strong>不保证原子性</strong>：对单次读&#x2F;写操作是原子的（对 <code>long</code>&#x2F;<code>double</code> 在 Java 5 后也保证原子），但非原子操作（如 <code>i++</code>）不是原子的。</li>
+<li><strong>典型用途</strong>：<ul>
+<li>状态标志（如 <code>volatile boolean running</code>）。</li>
+<li>用于实现双重检查锁定（DCL）单例中的 <code>instance</code>（在 Java 5+ 环境下有效）。</li>
+</ul>
+</li>
+<li><strong>与 synchronized 比较</strong>：<ul>
+<li><code>volatile</code> 轻量，只保证可见性与部分有序性，不保证互斥；适用于简单状态通信。</li>
+<li><code>synchronized</code> 提供互斥和可见性保证（更重），并可配合 <code>wait/notify</code>。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="31-synchronized-的作用及底层原理？"><a href="#31-synchronized-的作用及底层原理？" class="headerlink" title="31. synchronized 的作用及底层原理？"></a>31. <code>synchronized</code> 的作用及底层原理？</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
+<li><strong>互斥（排它）</strong>：保证同一时间只有一个线程可以执行被 <code>synchronized</code> 修饰的代码块或方法（针对同一把锁）。</li>
+<li><strong>可见性</strong>：进入&#x2F;退出同步块会建立 happens-before 关系，确保锁释放前的写对随后获取该锁的线程可见。</li>
+<li><strong>用途</strong>：保护临界区、确保多个线程对共享可变状态的安全访问。</li>
+</ul>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><ul>
+<li><strong>方法级别</strong>：<ul>
+<li><code>synchronized void m() &#123; ... &#125;</code>：等价于 <code>synchronized(this)</code>（实例方法）或 <code>synchronized (ClassName.class)</code>（静态方法）。</li>
+</ul>
+</li>
+<li><strong>代码块级别</strong>：<ul>
+<li><code>synchronized(this) &#123; ... &#125;</code> 或 <code>synchronized(lockObj) &#123; ... &#125;</code> 更灵活，能减小锁的粒度。</li>
+</ul>
+</li>
+</ul>
+<h3 id="底层原理（HotSpot-实现概要）"><a href="#底层原理（HotSpot-实现概要）" class="headerlink" title="底层原理（HotSpot 实现概要）"></a>底层原理（HotSpot 实现概要）</h3><ul>
+<li>JVM 使用对象头（object header）中的 <strong>mark word</strong> 和关联数据结构维护锁状态。</li>
+<li>锁优化策略（为提升性能，HotSpot 引入若干优化）：<ol>
+<li><strong>偏向锁（Biased Locking）</strong>：在没有竞争的情况下，锁会偏向于第一次获得它的线程，重复获取无需 CAS，减少开销。</li>
+<li><strong>轻量级锁（Lightweight Locking）</strong>：使用 CAS 操作在栈上记录加锁记录，避免进入重量级监视器（monitor）。</li>
+<li><strong>重量级锁（Monitor&#x2F;Mutex）</strong>：当竞争激烈或 CAS 失败时，升级为重量级锁，使用操作系统互斥量（可能涉及线程阻塞&#x2F;唤醒）。</li>
+</ol>
+</li>
+<li><code>monitorenter</code> &#x2F; <code>monitorexit</code> 是字节码指令（由编译器&#x2F;字节码生成器生成）。</li>
+<li>JIT 编译器可进行锁消除、锁粗化、锁优化等（当能证明无并发访问或已外部同步时）。</li>
+</ul>
+<h3 id="wait-notify-notifyAll"><a href="#wait-notify-notifyAll" class="headerlink" title="wait/notify&#x2F;notifyAll"></a><code>wait/notify</code>&#x2F;<code>notifyAll</code></h3><ul>
+<li><code>Object.wait()</code>、<code>notify()</code>、<code>notifyAll()</code> 必须在持有对象监视器（即在 <code>synchronized</code> 块内）时调用，用于线程间协作（条件等待&#x2F;通知）。</li>
+<li><code>wait()</code> 会释放锁并进入等待队列；<code>notify()</code> 唤醒等待队列中的一个线程（被唤醒线程在重新获得锁后继续）。</li>
+</ul>
+<h3 id="注意与陷阱"><a href="#注意与陷阱" class="headerlink" title="注意与陷阱"></a>注意与陷阱</h3><ul>
+<li>锁粒度：避免用过大锁（如 <code>synchronized</code> 在方法头部锁住大量操作），谨慎使用 <code>String</code> 或装箱对象作为锁（可能会导致多个实例共用同一锁或锁被外部持有）。</li>
+<li>死锁：多线程锁顺序不当可能死锁；设计时谨防。</li>
+<li>性能：在高并发下可考虑使用 <code>java.util.concurrent</code> 包（<code>ReentrantLock</code>、<code>ConcurrentHashMap</code>、<code>AtomicXxx</code>）等更细粒度、高性能的并发工具。</li>
+</ul>
+<hr>
+<hr>
+<h2 id="二、面向对象编程（OOP）"><a href="#二、面向对象编程（OOP）" class="headerlink" title="二、面向对象编程（OOP）"></a>二、面向对象编程（OOP）</h2><ol>
+<li>面向对象的三大特性是什么？</li>
+<li>封装的作用是什么？</li>
+<li>多态的优点是什么？</li>
+<li>重写方法时返回值能否不同？</li>
+<li>构造函数能否被继承？</li>
+<li>构造函数能否 private？</li>
+<li>单例模式的几种实现方式？</li>
+<li>饿汉式和懒汉式单例的区别？</li>
+<li>为什么要使用内部类？</li>
+<li>成员内部类、局部内部类、静态内部类的区别？</li>
+<li>Java 中对象的创建方式有哪些？</li>
+<li>对象之间的浅拷贝和深拷贝的区别？</li>
+<li>clone() 方法的原理？</li>
+<li>为什么 Java 不支持多继承？</li>
+<li>Java 是值传递还是引用传递？</li>
+<li>方法参数传递时是如何处理对象的？</li>
+<li>封装性体现在哪些方面？</li>
+<li>为什么需要继承？</li>
+<li>重写 Object 类的 toString 方法的意义？</li>
+<li>重写 Object 类的 equals 方法时需要注意什么？</li>
+</ol>
+<hr>
+<h2 id="三、异常处理"><a href="#三、异常处理" class="headerlink" title="三、异常处理"></a>三、异常处理</h2><ol>
+<li>Java 的异常体系结构？</li>
+<li>Checked Exception 和 Unchecked Exception 的区别？</li>
+<li>throw 和 throws 的区别？</li>
+<li>try-catch-finally 的执行顺序？</li>
+<li>finally 中的 return 会覆盖 try 中的 return 吗？</li>
+<li>try-with-resources 的作用？</li>
+<li>自定义异常类如何实现？</li>
+<li>Error 和 Exception 的区别？</li>
+<li>NullPointerException 常见场景有哪些？</li>
+<li>运行时异常需要捕获吗？为什么？</li>
+</ol>
+<hr>
+<h2 id="四、集合框架（Collections）"><a href="#四、集合框架（Collections）" class="headerlink" title="四、集合框架（Collections）"></a>四、集合框架（Collections）</h2><ol>
+<li>Collection 和 Collections 的区别？</li>
+<li>List、Set、Map 的区别？</li>
+<li>ArrayList 和 LinkedList 的区别？</li>
+<li>HashMap 的底层实现？</li>
+<li>HashMap 1.7 和 1.8 的区别？</li>
+<li>HashMap 如何解决哈希冲突？</li>
+<li>HashSet 的底层实现？</li>
+<li>ConcurrentHashMap 的底层实现？</li>
+<li>Hashtable 和 HashMap 的区别？</li>
+<li>TreeMap 和 HashMap 的区别？</li>
+<li>WeakHashMap 的特点？</li>
+<li>CopyOnWriteArrayList 的应用场景？</li>
+<li>LinkedHashMap 的底层原理？</li>
+<li>Map 的 key 是否可以为 null？</li>
+<li>ArrayList 扩容机制？</li>
+<li>Vector 和 ArrayList 的区别？</li>
+<li>PriorityQueue 的底层实现？</li>
+<li>BlockingQueue 的几种实现类？</li>
+<li>HashMap 死循环问题出现在哪个版本？</li>
+<li>fail-fast 和 fail-safe 的区别？</li>
+</ol>
+<hr>
+<h2 id="五、并发编程（JUC）"><a href="#五、并发编程（JUC）" class="headerlink" title="五、并发编程（JUC）"></a>五、并发编程（JUC）</h2><ol>
+<li>Java 中的线程生命周期？</li>
+<li>Runnable 和 Callable 的区别？</li>
+<li>ThreadPoolExecutor 的参数有哪些？</li>
+<li>线程池的拒绝策略有哪些？</li>
+<li>创建线程的四种方式？</li>
+<li>synchronized 的底层实现原理？</li>
+<li>synchronized 和 ReentrantLock 的区别？</li>
+<li>公平锁和非公平锁的区别？</li>
+<li>AQS 的原理？</li>
+<li>CountDownLatch 的应用场景？</li>
+<li>CyclicBarrier 的应用场景？</li>
+<li>Semaphore 的应用场景？</li>
+<li>Exchanger 的应用场景？</li>
+<li>volatile 能保证原子性吗？</li>
+<li>CAS 的原理？</li>
+<li>ABA 问题是什么？怎么解决？</li>
+<li>ThreadLocal 的作用及原理？</li>
+<li>ThreadLocal 内存泄漏的原因？</li>
+<li>JUC 中的原子类有哪些？</li>
+<li>乐观锁和悲观锁的区别？</li>
+</ol>
+<hr>
+<h2 id="六、JVM-内存模型"><a href="#六、JVM-内存模型" class="headerlink" title="六、JVM &amp; 内存模型"></a>六、JVM &amp; 内存模型</h2><ol>
+<li>JVM 内存结构？</li>
+<li>堆和栈的区别？</li>
+<li>堆内存的分代模型？</li>
+<li>新生代、老年代、永久代的区别？</li>
+<li>元空间和永久代的区别？</li>
+<li>对象在堆中的分配过程？</li>
+<li>对象什么时候进入老年代？</li>
+<li>JVM 的垃圾回收算法？</li>
+<li>垃圾收集器有哪些？</li>
+<li>CMS 和 G1 的区别？</li>
+<li>Minor GC 和 Full GC 的区别？</li>
+<li>什么是 Stop The World？</li>
+<li>JVM 常见的调优参数？</li>
+<li>类加载的双亲委派机制？</li>
+<li>双亲委派的好处？</li>
+<li>类加载器的种类？</li>
+<li>OOM 的常见类型？</li>
+<li>内存泄漏和内存溢出的区别？</li>
+<li>finalize() 方法的作用？</li>
+<li>Java 内存模型（JMM）的核心内容？</li>
+</ol>
+<hr>
+<h2 id="七、泛型、注解、反射"><a href="#七、泛型、注解、反射" class="headerlink" title="七、泛型、注解、反射"></a>七、泛型、注解、反射</h2><ol>
+<li>什么是泛型？</li>
+<li>泛型的类型擦除机制？</li>
+<li>泛型通配符 <code>? extends</code> 和 <code>? super</code> 的区别？</li>
+<li>注解的作用是什么？</li>
+<li>元注解有哪些？</li>
+<li>自定义注解如何实现？</li>
+<li>反射的作用？</li>
+<li>反射的性能问题？</li>
+<li>反射能否访问私有字段？</li>
+<li>动态代理的两种实现方式？</li>
+<li>JDK 动态代理和 CGLIB 的区别？</li>
+<li>反射如何创建对象？</li>
+<li>Class.forName 和 ClassLoader.loadClass 的区别？</li>
+<li>注解和反射结合能实现哪些功能？</li>
+<li>注解处理器（APT）的作用？</li>
+</ol>
+<hr>
+<h2 id="八、Java-8-新特性"><a href="#八、Java-8-新特性" class="headerlink" title="八、Java 8+ 新特性"></a>八、Java 8+ 新特性</h2><ol>
+<li>Lambda 表达式的作用？</li>
+<li>函数式接口有哪些？</li>
+<li>Stream 流的常见操作？</li>
+<li>Optional 的作用？</li>
+<li>CompletableFuture 的作用？</li>
+<li>Java 8 接口的默认方法和静态方法？</li>
+<li>forEach 和传统 for 的区别？</li>
+<li>parallelStream 的原理？</li>
+<li>Java 9 模块化系统（Jigsaw）是什么？</li>
+<li>Java 14 的 switch 表达式增强？</li>
+<li>Java 16 的 record 特性？</li>
+<li>Java 17 的 sealed class 特性？</li>
+<li>var 关键字是什么？</li>
+<li>ZGC 的特性？</li>
+<li>Project Loom 的虚拟线程是什么？</li>
+</ol>
+<h2 id="九、IO"><a href="#九、IO" class="headerlink" title="九、IO"></a>九、IO</h2><p>好 — 我把范围 <strong>大幅扩展并细化</strong>，把 <strong>Socket &#x2F; TCP &#x2F; UDP &#x2F; TLS &#x2F; WebSocket &#x2F; 内核调优 &#x2F; 实战题 &#x2F; 编码题</strong> 都加进来了。现在给你一个<strong>160 道题目清单</strong>（按主题分组），覆盖面更广、更细致，便于你当面试题库或复习大纲使用。</p>
+<h1 id="Java-IO-Socket-深度面试题（160题）"><a href="#Java-IO-Socket-深度面试题（160题）" class="headerlink" title="Java IO &amp; Socket 深度面试题（160题）"></a>Java IO &amp; Socket 深度面试题（160题）</h1><hr>
+<h2 id="一、Java-IO-基础与流（1–20）"><a href="#一、Java-IO-基础与流（1–20）" class="headerlink" title="一、Java IO 基础与流（1–20）"></a>一、Java IO 基础与流（1–20）</h2><ol>
+<li>Java IO 的总体体系结构是什么？</li>
+<li>InputStream &#x2F; OutputStream 的常见子类有哪些？</li>
+<li>Reader &#x2F; Writer 的常见子类有哪些？</li>
+<li>字节流与字符流的本质区别和使用场景？</li>
+<li>为什么要有缓冲流（BufferedInputStream &#x2F; BufferedReader）？</li>
+<li>flush() 与 close() 的区别与细节（含异常处理）？</li>
+<li>try-with-resources 的工作原理（AutoCloseable、suppressed exceptions）？</li>
+<li>装饰器模式在 Java IO 中如何体现？举例链式包装。</li>
+<li>File 类的能力与限制（能否读写数据、元数据操作）？</li>
+<li>RandomAccessFile 的用途、指针机制与并发注意点？</li>
+<li>FileInputStream 与 FileReader 有什么差别？何时用哪个？</li>
+<li>常见的文件读写拷贝实现方式（read&#x2F;write、buffered、NIO transferTo）性能对比。</li>
+<li>如何安全地读写文本并处理字符编码（InputStreamReader&#x2F;OutputStreamWriter）？</li>
+<li>字符编码问题常见坑（UTF-8 与 GBK 混用、BOM、截断）如何避免？</li>
+<li>文件追加（append）实现方式与原子性问题。</li>
+<li>如何判断并处理文件是否存在、权限、是否被占用？</li>
+<li>File.mkdirs() 与 mkdir() 的区别与返回值含义。</li>
+<li>临时文件（File.createTempFile）与删除策略。</li>
+<li>文件的读写锁与并发访问策略（何时需要外部锁）。</li>
+<li>流关闭异常处理的最佳实践。</li>
+</ol>
+<hr>
+<h2 id="二、Java-IO-设计与模式（21–40）"><a href="#二、Java-IO-设计与模式（21–40）" class="headerlink" title="二、Java IO 设计与模式（21–40）"></a>二、Java IO 设计与模式（21–40）</h2><ol>
+<li>InputStream&#x2F;OutputStream 的装饰器链常见组合（Buffered -&gt; GZIP -&gt; Cipher 等）。</li>
+<li>PushbackInputStream、SequenceInputStream 的作用与应用场景。</li>
+<li>PipedInputStream &#x2F; PipedOutputStream（管道流）的使用与线程注意点。</li>
+<li>FilterInputStream&#x2F;FilterOutputStream 的设计与扩展。</li>
+<li>IO 与异常处理：IOException 的常见子类与处理策略。</li>
+<li>流复制的常见实现模板（模板方法式代码）。</li>
+<li>NIO 引入前的 IO 局限性（可扩展性、线程模型）。</li>
+<li>如何实现一个带超时的读操作（Socket&#x2F;Channel）？</li>
+<li>流式处理与内存友好型处理（流式处理大文件）实践。</li>
+<li>Base64 编解码在流中的高效集成方法。</li>
+<li>加密&#x2F;解密流（CipherInputStream&#x2F;CipherOutputStream）如何正确关闭？</li>
+<li>GZIPInputStream&#x2F;GZIPOutputStream 的压缩流使用注意事项。</li>
+<li>ObjectInputStream&#x2F;ObjectOutputStream 的工作机制（类元数据、句柄表）。</li>
+<li>如何实现跨语言的序列化兼容（JSON&#x2F;Protobuf&#x2F;Avro）？</li>
+<li>实现自定义 InputStream 子类时需要注意什么（read 方法语义）？</li>
+<li>设计用于日志写入的高吞吐 IO 模式（异步批量写）。</li>
+<li>流复制时如何统计速率与进度（带进度回调）？</li>
+<li>如何安全处理二进制文件（流边界、magic header）？</li>
+<li>大对象&#x2F;大数组写入流时的内存优化策略（分块、流化）。</li>
+<li>如何实现可重入&#x2F;可恢复的断点续传文件写入？</li>
+</ol>
+<hr>
+<h2 id="三、文件系统、锁与操作（41–60）"><a href="#三、文件系统、锁与操作（41–60）" class="headerlink" title="三、文件系统、锁与操作（41–60）"></a>三、文件系统、锁与操作（41–60）</h2><ol>
+<li>Java 中文件锁 FileLock 的类型（共享&#x2F;独占）及实现原理。</li>
+<li>FileLock 的局限性（跨 JVM、跨 OS 行为差异）。</li>
+<li>文件描述符泄露的常见原因与定位方法。</li>
+<li>文件句柄上限（ulimit）对 Java 服务的影响与排查。</li>
+<li>硬链接与软链接在 Java 中如何区分与操作？</li>
+<li>MappedByteBuffer（内存映射文件）的优劣与风险（内存回收、文件锁）。</li>
+<li>大文件分片读取与并发合并策略。</li>
+<li>如何高效统计大日志文件中某条件的行数（分块 + 并行）？</li>
+<li>文件系统缓存（PageCache）对读写性能的影响机制。</li>
+<li>fsync &#x2F; FileDescriptor.sync 在持久化保障上的作用。</li>
+<li>文件顺序写与随机写的性能差异与优化建议。</li>
+<li>磁盘类型（SSD vs HDD）对 IO 策略的影响。</li>
+<li>原子重命名（renameTo&#x2F;Files.move）的跨平台差异。</li>
+<li>文件监控（WatchService）的实现限制与替代方案。</li>
+<li>处理日志切割（rotation）时的文件句柄管理策略。</li>
+<li>如何实现零停机部署中对文件的平滑迁移？</li>
+<li>软删除（标记删除）与物理删除的 IO 考量。</li>
+<li>备份&#x2F;快照策略对 IO 的影响（冷备 vs 热备）。</li>
+<li>大文件校验（MD5&#x2F;SHA）在流式处理中的实现。</li>
+<li>文件系统一致性问题（写入后立即读取到不同步）如何诊断。</li>
+</ol>
+<hr>
+<h2 id="四、序列化与反序列化（61–75）"><a href="#四、序列化与反序列化（61–75）" class="headerlink" title="四、序列化与反序列化（61–75）"></a>四、序列化与反序列化（61–75）</h2><ol>
+<li>Java 原生序列化（Serializable）的机制和对象写入格式。</li>
+<li>serialVersionUID 的作用、自动生成与兼容性策略。</li>
+<li>transient 字段、static 字段在序列化中的处理。</li>
+<li>Externalizable 与 Serializable 的区别与使用场景。</li>
+<li>Java 序列化的安全风险（反序列化漏洞）与防护措施。</li>
+<li>高性能二进制序列化方案对比：Kryo、Protostuff、Protobuf、Avro。</li>
+<li>JSON 和二进制序列化的权衡（可读性 vs 性能&#x2F;大小）。</li>
+<li>如何实现可演化的序列化协议（向前&#x2F;向后兼容）？</li>
+<li>对象图序列化时循环引用的处理（句柄机制）。</li>
+<li>对象序列化性能调优要点（缓冲、对象重用）。</li>
+<li>在分布式系统中如何管理序列化策略（跨服务版本）？</li>
+<li>自定义序列化（writeObject&#x2F;readObject）常见陷阱。</li>
+<li>序列化时如何处理类加载器问题？</li>
+<li>大对象序列化时的内存与 GC 风险如何降低？</li>
+<li>使用序列化作为缓存（Redis&#x2F;Memcached）时的注意事项。</li>
+</ol>
+<hr>
+<h2 id="五、NIO-深入：Buffer-Channel-Selector（76–100）"><a href="#五、NIO-深入：Buffer-Channel-Selector（76–100）" class="headerlink" title="五、NIO 深入：Buffer &#x2F; Channel &#x2F; Selector（76–100）"></a>五、NIO 深入：Buffer &#x2F; Channel &#x2F; Selector（76–100）</h2><ol>
+<li>NIO 三大核心（Buffer、Channel、Selector）各自职责是什么？</li>
+<li>ByteBuffer 的 position &#x2F; limit &#x2F; capacity 三指针语义详解。</li>
+<li>flip(), clear(), rewind(), compact() 各自什么时候用？</li>
+<li>DirectByteBuffer 与 HeapByteBuffer 的底层差异与性能影响。</li>
+<li>ByteBuffer 的切片（slice）与只读视图（asReadOnlyBuffer）。</li>
+<li>Scatter&#x2F;Gather IO（分散读取&#x2F;聚集写入）的使用场景与实现。</li>
+<li>FileChannel 的 position、size、truncate 等方法详解。</li>
+<li>MappedByteBuffer（内存映射）在 NIO 中如何创建与释放？</li>
+<li>Channel 与传统 Stream 的区别（阻塞&#x2F;非阻塞、文件描述符共享）。</li>
+<li>Selector 的工作流程：注册、选择、取消、keys、selectedKeys。</li>
+<li>Selector 的底层实现依赖（select&#x2F;poll&#x2F;epoll&#x2F;kqueue）及其影响。</li>
+<li>非阻塞 Channel 的 read&#x2F;write 返回值语义（-1、0、&gt;0）。</li>
+<li>NIO 中的粘包&#x2F;拆包问题与常见解决策略（定长&#x2F;分隔&#x2F;长度前置）。</li>
+<li>如何在 NIO 中实现超时断开和心跳检测？</li>
+<li>Pipe（管道）在 NIO 中的用途与限制。</li>
+<li>多 Selector &#x2F; 多 Reactor 的线程模型设计要点。</li>
+<li>ByteBuffer 内存可见性与多线程访问问题（不是线程安全）。</li>
+<li>避免 NIO 频繁创建 DirectByteBuffer 的垃圾和内存泄露策略。</li>
+<li>使用 Selector 时的遍历与删除 selectedKeys 的正确姿势。</li>
+<li>NIO 读写循环的高效实现模板。</li>
+<li>Channel.transferTo&#x2F;transferFrom 的零拷贝含义与局限。</li>
+<li>NIO 与 FileChannel 实现文件间高效复制的流程。</li>
+<li>使用 NIO 实现高并发服务器时的常见瓶颈。</li>
+<li>NIO 在 Windows 与 Linux 上的行为差异（可伸缩性影响）。</li>
+<li>实战题：实现一个使用 NIO 的简单 echo 服务器（思路要点）。</li>
+</ol>
+<hr>
+<h2 id="六、Socket-TCP-UDP-WebSocket（101–140）"><a href="#六、Socket-TCP-UDP-WebSocket（101–140）" class="headerlink" title="六、Socket &#x2F; TCP &#x2F; UDP &#x2F; WebSocket（101–140）"></a>六、Socket &#x2F; TCP &#x2F; UDP &#x2F; WebSocket（101–140）</h2><ol>
+<li>Socket 的基本概念：端点、三元组&#x2F;四元组（IP:port + peer）。</li>
+<li>Java 中 Socket、ServerSocket、DatagramSocket 的主要 API 区别。</li>
+<li>TCP 与 UDP 的核心差异（可靠性、有序性、连接性）。</li>
+<li>TCP 三次握手（SYN、SYN-ACK、ACK）与四次挥手流程详解。</li>
+<li>TIME_WAIT、CLOSE_WAIT、FIN_WAIT1&#x2F;2 等 TCP 状态含义与产生原因。</li>
+<li>半开连接（half-open）是什么，如何检测与恢复？</li>
+<li>TCP 的流量控制（窗口）与拥塞控制（慢启动、拥塞避免、快重传、快恢复）基础。</li>
+<li>Nagle 算法（TCP_NODELAY）的原理和在延迟场景下的影响。</li>
+<li>TCP 延迟确认（delayed ACK）对交互型应用的影响。</li>
+<li>Socket 选项 SO_TIMEOUT、SO_KEEPALIVE、SO_REUSEADDR、SO_REUSEPORT、SO_LINGER 含义与使用场景。</li>
+<li>backlog 参数（ServerSocket 构造或 listen）与 accept 队列（syn, accept 队列）区别。</li>
+<li>ephemeral port（短暂端口）与端口耗尽问题及解决办法。</li>
+<li>SYN flood 攻击的原理和防护（SYN cookies、firewall）。</li>
+<li>TCP 快速打开（TCP Fast Open）是什么，有何优劣？（简述）</li>
+<li>MTU、MSS 与 IP 分片对传输的影响与诊断方法。</li>
+<li>UDP 的组播（Multicast）与广播（Broadcast）机制与 Java 支持（MulticastSocket）。</li>
+<li>UDP 丢包、乱序、包大小限制（最佳实践）。</li>
+<li>UDP 穿透 NAT（STUN&#x2F;ICE）的基本原理。</li>
+<li>如何在 Java 中实现高性能 UDP 服务器？（NIO + DatagramChannel）</li>
+<li>WebSocket 协议基础（握手、帧格式、ping&#x2F;pong、close）。</li>
+<li>Java 实现 WebSocket 的常见库（javax.websocket、Netty websocket、Undertow）。</li>
+<li>TLS over TCP（HTTPS）的握手流程要点（证书验证、对称密钥协商）。</li>
+<li>使用 SSLSocket &#x2F; SSLServerSocket 和 SSLEngine 的差别及适用场景。</li>
+<li>SSL&#x2F;TLS 握手的重用（session resumption）与性能优化。</li>
+<li>中间人攻击（MITM）与证书链、CA、信任根的角色。</li>
+<li>如何在 Socket 程序中实现心跳、超时与断线重连？</li>
+<li>TCP Keepalive 与应用层心跳的区别和协同使用。</li>
+<li>如何通过抓包（tcpdump&#x2F;wireshark）诊断 Socket 连接问题？</li>
+<li>Socket 的非阻塞 accept&#x2F;read&#x2F;write 实现注意点（资源&#x2F;异步安全）。</li>
+<li>如何避免 TCP 粘包&#x2F;拆包在 Socket 原生编程中的影响（流式协议设计）？</li>
+<li>实战：实现一个带长度前缀的 TCP 协议的 Java 服务端&#x2F;客户端（思路）。</li>
+<li>如何优雅处理大量短连接的场景？（连接池、HTTP keep-alive）</li>
+<li>Socket 端口复用（SO_REUSEADDR vs SO_REUSEPORT）在负载均衡中的用法。</li>
+<li>多路复用（select&#x2F;poll&#x2F;epoll）与 socket 大连接数的处理。</li>
+<li>网络字节序（big-endian）与数据编解码注意点。</li>
+<li>使用 TCP_NODELAY（禁用 Nagle）时的 CPU&#x2F;网络 trade-off。</li>
+<li>如何在 Java 中做到零拷贝文件传输（Socket + FileChannel.transferTo）？</li>
+<li>Socket 关闭流程中遇到阻塞（SO_LINGER）的处理办法。</li>
+<li>如何防止或检测 “socket half-closed” 的资源泄漏？</li>
+<li>实战题：用 BIO、NIO、Netty 各实现一个简易的聊天服务器，比较性能与代码复杂度（思路要点）。</li>
+</ol>
+<hr>
+<h2 id="七、异步-IO、IO-模型与高阶模式（141–150）"><a href="#七、异步-IO、IO-模型与高阶模式（141–150）" class="headerlink" title="七、异步 IO、IO 模型与高阶模式（141–150）"></a>七、异步 IO、IO 模型与高阶模式（141–150）</h2><ol>
+<li>IO 模型分类：同步阻塞、同步非阻塞、IO 多路复用、信号驱动、异步（AIO）。</li>
+<li>Reactor 模式与 Proactor 模式的原理与区别。</li>
+<li>Java AIO（AsynchronousChannel、AsynchronousSocketChannel）API 介绍。</li>
+<li>CompletionHandler 与 Future 风格的异步回调比较。</li>
+<li>高并发下选择 NIO 还是 AIO 的实际考量（实现复杂度、平台支持）。</li>
+<li>事件驱动系统的 back-pressure 设计（流控、速率限制）。</li>
+<li>线程模型设计：acceptors &#x2F; io workers &#x2F; business workers 的权衡。</li>
+<li>RCU、无锁队列在高并发 IO 框架中的应用场景。</li>
+<li>如何在应用层实现请求队列与排队策略来缓解突发流量？</li>
+<li>实战题：设计一个支持百万连接的服务器架构（核心组件与 IO 策略）。</li>
+</ol>
+<hr>
+<h2 id="八、零拷贝、内核与性能调优（151–160）"><a href="#八、零拷贝、内核与性能调优（151–160）" class="headerlink" title="八、零拷贝、内核与性能调优（151–160）"></a>八、零拷贝、内核与性能调优（151–160）</h2><ol>
+<li>零拷贝（zero-copy）概念和常见实现（sendfile, mmap, splice）。</li>
+<li>FileChannel.transferTo&#x2F;transferFrom 在 Linux 下如何利用 sendfile 实现零拷贝？</li>
+<li>mmap（内存映射文件）的实现原理与 GC &#x2F;回收问题。</li>
+<li>DMA（Direct Memory Access）在零拷贝中的作用与限制。</li>
+<li>内核态 &#x2F; 用户态拷贝次数与零拷贝带来的减少效果。</li>
+<li>TCP 窗口、拥塞控制调优参数（net.ipv4.tcp_* 系列常见项）。</li>
+<li>系统级调优：文件描述符上限（ulimit -n）、somaxconn、backlog、epoll_limits 等。</li>
+<li>高并发网络服务的监控指标（fd 使用、accept latency、context switch、cpu steal）。</li>
+<li>性能诊断工具与流程：iostat, vmstat, sar, perf, tcpdump, ss, strace。</li>
+<li>实战题：如何定位并修复一个高并发服务器的 accept 阻塞 &#x2F; 连接丢失 问题（诊断步骤）。</li>
+</ol>
+<hr>
+<p>如果你愿意，我可以 <strong>接着把每一道题写成“面试级详细解析”</strong>：每题包含 —— <strong>概念简述 + 原理&#x2F;底层机制 + 常见面试追问点 + 典型代码&#x2F;伪代码（若适用） + 常见坑与性能考量</strong>。<br> 为了不把单条回复弄得太长，我建议按批次输出解析（例如每批 15–20 题）。</p>
+<p>下面我 <strong>先示范性地把第 1–10 题写成详细解析</strong>，风格如下（概念 + 要点 + 代码&#x2F;命令 + 面试追问点）。如果你满意这个格式，我会继续按相同风格往下写每批题的解析。</p>
+<hr>
+<h1 id="示例：第1–10题-详细解析（示范风格）"><a href="#示例：第1–10题-详细解析（示范风格）" class="headerlink" title="示例：第1–10题 详细解析（示范风格）"></a>示例：第1–10题 详细解析（示范风格）</h1><h3 id="1-Java-IO-的总体体系结构是什么？"><a href="#1-Java-IO-的总体体系结构是什么？" class="headerlink" title="1. Java IO 的总体体系结构是什么？"></a>1. Java IO 的总体体系结构是什么？</h3><p><strong>概念</strong><br> Java IO 可以分为两大类：传统阻塞 IO（java.io）和 NIO（java.nio）。传统 IO 提供字节流（InputStream&#x2F;OutputStream）、字符流（Reader&#x2F;Writer）、以及各种装饰器（Buffered、Data、Object 等）。NIO 提供 Buffer、Channel、Selector 及更底层的文件映射（MappedByteBuffer）。</p>
+<p><strong>原理 &#x2F; 要点</strong></p>
+<ul>
+<li>传统 IO 基于流（Stream）抽象，面向流式、同步、阻塞操作。</li>
+<li>NIO 引入 Buffer（内存块）和 Channel（可读写的端点），支持非阻塞和多路复用（Selector），更适合高并发网络 I&#x2F;O。</li>
+<li>Java 还有 AIO（Asynchronous IO）作为异步回调风格的补充（java.nio.channels.AsynchronousChannel）。</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>什么时候用阻塞 IO，什么时候用 NIO？</li>
+<li>NIO 能否替代传统 IO？（部分场景：文件流仍然方便）</li>
+<li>AIO 与 NIO 的区别是什么？</li>
+</ul>
+<hr>
+<h3 id="2-InputStream-OutputStream-的常见子类有哪些？"><a href="#2-InputStream-OutputStream-的常见子类有哪些？" class="headerlink" title="2. InputStream &#x2F; OutputStream 的常见子类有哪些？"></a>2. InputStream &#x2F; OutputStream 的常见子类有哪些？</h3><p><strong>要点列举（常见）</strong></p>
+<ul>
+<li>FileInputStream &#x2F; FileOutputStream（文件字节流）</li>
+<li>ByteArrayInputStream &#x2F; ByteArrayOutputStream（内存字节流）</li>
+<li>BufferedInputStream &#x2F; BufferedOutputStream（缓冲）</li>
+<li>DataInputStream &#x2F; DataOutputStream（按基本类型读写）</li>
+<li>ObjectInputStream &#x2F; ObjectOutputStream（对象序列化）</li>
+<li>PipedInputStream &#x2F; PipedOutputStream（管道，用于线程间通信）</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>什么时候使用 Buffered 流？（I&#x2F;O 较小且频繁时）</li>
+<li>DataOutputStream 写的二进制如何跨平台读？（须约定端序）</li>
+</ul>
+<hr>
+<h3 id="3-Reader-Writer-的常见子类有哪些？"><a href="#3-Reader-Writer-的常见子类有哪些？" class="headerlink" title="3. Reader &#x2F; Writer 的常见子类有哪些？"></a>3. Reader &#x2F; Writer 的常见子类有哪些？</h3><p><strong>要点列举（常见）</strong></p>
+<ul>
+<li>FileReader &#x2F; FileWriter（字符文件）</li>
+<li>InputStreamReader &#x2F; OutputStreamWriter（字节流 ↔ 字符流 适配器）</li>
+<li>BufferedReader &#x2F; BufferedWriter（字符缓冲）</li>
+<li>CharArrayReader &#x2F; CharArrayWriter（基于字符数组）</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>为什么不用 FileReader 直接读取所有文本？（编码问题）</li>
+<li>InputStreamReader 如何指定编码？</li>
+</ul>
+<hr>
+<h3 id="4-字节流与字符流的本质区别和使用场景？"><a href="#4-字节流与字符流的本质区别和使用场景？" class="headerlink" title="4. 字节流与字符流的本质区别和使用场景？"></a>4. 字节流与字符流的本质区别和使用场景？</h3><p><strong>概念</strong></p>
+<ul>
+<li>字节流（InputStream&#x2F;OutputStream）以字节为单位处理数据，适用于二进制数据（图片、音频、视频、压缩包）。</li>
+<li>字符流（Reader&#x2F;Writer）以字符为单位，做了字符解码&#x2F;编码，适合处理文本。字符流基于字符集（charset），内部通常由 InputStreamReader&#x2F;OutputStreamWriter 做转换。</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>处理 UTF-8 文件时用哪种流？（用字节流 + 指定 InputStreamReader 编码，或者 Files.newBufferedReader(Path, Charset)）</li>
+<li>字符流会不会丢失数据？（若编码&#x2F;解码不一致会）</li>
+</ul>
+<hr>
+<h3 id="5-为什么要有缓冲流（BufferedInputStream-BufferedReader）？"><a href="#5-为什么要有缓冲流（BufferedInputStream-BufferedReader）？" class="headerlink" title="5. 为什么要有缓冲流（BufferedInputStream &#x2F; BufferedReader）？"></a>5. 为什么要有缓冲流（BufferedInputStream &#x2F; BufferedReader）？</h3><p><strong>要点</strong></p>
+<ul>
+<li>减少系统调用次数（read 系统调用代价高），提升 I&#x2F;O 效率。</li>
+<li>提供按行读取、标记&#x2F;重置等高级功能（BufferedReader.readLine(), mark&#x2F;reset）。</li>
+<li>对小、频繁的读写操作特别有效。</li>
+</ul>
+<p><strong>代码示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path), StandardCharsets.UTF_8))) &#123;</span><br><span class="line">    String line;</span><br><span class="line">    while ((line = br.readLine()) != null) &#123;</span><br><span class="line">        // 处理</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>BufferedInputStream 的默认缓冲区大小是多少？（通常 8KB，但可构造时指定）</li>
+<li>缓冲流什么时候可能不适合使用？（极低延迟、实时数据场景）</li>
+</ul>
+<hr>
+<h3 id="6-flush-与-close-的区别与细节（含异常处理）"><a href="#6-flush-与-close-的区别与细节（含异常处理）" class="headerlink" title="6. flush() 与 close() 的区别与细节（含异常处理）"></a>6. flush() 与 close() 的区别与细节（含异常处理）</h3><p><strong>要点</strong></p>
+<ul>
+<li><code>flush()</code>：将缓冲区中的数据强制写出到底层流，但流仍然可用。适合在不关闭流的情况下确保数据发送。</li>
+<li><code>close()</code>：先 <code>flush()</code>，再释放资源（关闭底层描述符），关闭后不能再写入。<code>close()</code> 可能抛出异常，要在 finally 或 try-with-resources 中处理。</li>
+<li>try-with-resources 会自动调用 close，并会将 close 抛出的异常作为 suppressed exception 记录。</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>为什么要显式 flush？（网络协议的即时发送、日志写入保证等）</li>
+<li>close 抛出异常时如何处理 suppressed exception？（在 Java 里可通过 Throwable.getSuppressed() 查看）</li>
+</ul>
+<hr>
+<h3 id="7-try-with-resources-的工作原理（AutoCloseable、suppressed-exceptions）"><a href="#7-try-with-resources-的工作原理（AutoCloseable、suppressed-exceptions）" class="headerlink" title="7. try-with-resources 的工作原理（AutoCloseable、suppressed exceptions）"></a>7. try-with-resources 的工作原理（AutoCloseable、suppressed exceptions）</h3><p><strong>要点</strong></p>
+<ul>
+<li>Java 7 引入，任何实现 <code>AutoCloseable</code> 的对象都可以在 try(…) 中声明，try 结束时会自动调用 <code>close()</code>。</li>
+<li>若 try 块中抛出异常，close 抛出异常会被作为 suppressed 添加到初始异常上，不会覆盖初始异常。</li>
+<li>编译器把 try-with-resources 翻译为 finally 块并处理 suppressed。</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>AutoCloseable 与 Closeable 的区别？（Closeable 的 close() 声明抛 IOException；AutoCloseable 更通用）</li>
+<li>多个资源按什么顺序关闭？（与声明顺序相反，即后声明先关闭）</li>
+</ul>
+<hr>
+<h3 id="8-装饰器模式在-Java-IO-中如何体现？举例链式包装"><a href="#8-装饰器模式在-Java-IO-中如何体现？举例链式包装" class="headerlink" title="8. 装饰器模式在 Java IO 中如何体现？举例链式包装"></a>8. 装饰器模式在 Java IO 中如何体现？举例链式包装</h3><p><strong>要点</strong></p>
+<ul>
+<li>Java IO 将基础流包装成更复杂功能的流：例如 <code>new BufferedReader(new InputStreamReader(new FileInputStream(path)))</code>，每一层都是装饰器，扩展了读取能力（缓冲、解码）。</li>
+<li>装饰器允许在不改变原始类的情况下添加行为，且可任意组合。</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>装饰器带来的缺点？（层级过深可读性差、异常处理复杂）</li>
+</ul>
+<hr>
+<h3 id="9-File-类的能力与限制（能否读写数据、元数据操作）"><a href="#9-File-类的能力与限制（能否读写数据、元数据操作）" class="headerlink" title="9. File 类的能力与限制（能否读写数据、元数据操作）"></a>9. File 类的能力与限制（能否读写数据、元数据操作）</h3><p><strong>要点</strong></p>
+<ul>
+<li><code>java.io.File</code> 主要用于表示路径和进行文件&#x2F;目录的元数据操作（exists, isDirectory, length, renameTo 等），它 <strong>不直接读写内容</strong>。</li>
+<li>读写需通过流（FileInputStream&#x2F;FileOutputStream&#x2F;FileChannel 等）或 NIO 的 Files 工具类。</li>
+<li><code>File</code> 的 renameTo 在不同平台上语义不一致（原子性不可保证）。</li>
+</ul>
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>Java 7 后 Files &#x2F; Path 提供哪些增强？（更丰富的原子操作、拷贝、移动、文件属性）</li>
+</ul>
+<hr>
+<h3 id="10-RandomAccessFile-的用途、指针机制与并发注意点"><a href="#10-RandomAccessFile-的用途、指针机制与并发注意点" class="headerlink" title="10. RandomAccessFile 的用途、指针机制与并发注意点"></a>10. RandomAccessFile 的用途、指针机制与并发注意点</h3><p><strong>要点</strong></p>
+<ul>
+<li><code>RandomAccessFile</code> 允许在文件中任意位置读取&#x2F;写入，通过 <code>seek(long pos)</code> 移动文件指针。</li>
+<li>适合索引文件、实现简单的数据库、文件内插入&#x2F;覆盖等。</li>
+<li>不是线程安全的；多个线程共享同一个 RandomAccessFile 需外部同步或为每线程打开独立实例（但会增加文件描述符消耗）。</li>
+</ul>
+<p><strong>代码示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">try (RandomAccessFile raf = new RandomAccessFile(&quot;data.bin&quot;, &quot;rw&quot;)) &#123;</span><br><span class="line">    raf.seek(1024);</span><br><span class="line">    raf.writeInt(42);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>面试追问点</strong></p>
+<ul>
+<li>RandomAccessFile 与 FileChannel 的关系？（RandomAccessFile.getChannel() 可获取 Channel；NIO 更现代）</li>
+</ul>
+<hr>
+<p>如果这个示例的详细程度和格式符合你的期望，我会接着按相同格式把 <strong>第11–30</strong>、<strong>31–50</strong>……分批完整输出，直到把所有 160 题都写成“面试级详解”。我建议每批 15–20 题，这样查阅方便，也便于你随时检索或要求调整深度。</p>
+<p>要我继续把接下来的题（11–30）写成详细解析吗？我可以<strong>现在</strong>开始并把下一批（11–30，共20题）一次性发给你。</p>
+<hr>
+<p>当然可以 👍<br> Java 基础的面试题非常庞杂，我可以帮你继续扩展，补充到更多的维度，甚至超过 <strong>200+ 道</strong>。之前我给你整理了 <strong>150 道</strong>，下面我会在原有的基础上，继续补充更多（会覆盖一些面试官经常“刁钻”考的点、源码、陷阱题、实战场景）：</p>
+<hr>
+<h1 id="Java-基础面试题（继续扩展）"><a href="#Java-基础面试题（继续扩展）" class="headerlink" title="Java 基础面试题（继续扩展）"></a>Java 基础面试题（继续扩展）</h1><h3 id="一、语言特性-基础语法"><a href="#一、语言特性-基础语法" class="headerlink" title="一、语言特性 &amp; 基础语法"></a>一、语言特性 &amp; 基础语法</h3><ol>
+<li>Java 中的 <code>==</code> 和 <code>equals()</code> 有什么区别？如何正确重写 <code>equals()</code>？</li>
+<li>为什么重写 <code>equals()</code> 时必须重写 <code>hashCode()</code>？不重写会怎样？</li>
+<li><code>Object</code> 类有哪些方法？哪些方法经常需要重写？</li>
+<li><code>final</code>、<code>finally</code>、<code>finalize()</code> 有什么区别？</li>
+<li>Java 中的 <code>instanceof</code> 关键字是如何实现的？</li>
+<li>接口和抽象类的区别？接口能不能有构造函数？</li>
+<li>接口可以多继承吗？抽象类可以实现接口吗？</li>
+<li><code>default</code> 方法和 <code>static</code> 方法在接口中的意义是什么？</li>
+<li>什么是内部类？分为哪几种？（成员内部类、静态内部类、局部内部类、匿名内部类）</li>
+<li>匿名内部类和 Lambda 表达式的区别？</li>
+</ol>
+<hr>
+<h3 id="二、数据类型-内存"><a href="#二、数据类型-内存" class="headerlink" title="二、数据类型 &amp; 内存"></a>二、数据类型 &amp; 内存</h3><ol>
+<li>Java 中的基本数据类型和包装类型有哪些区别？</li>
+<li>为什么 <code>Integer</code> 有缓存机制？范围是多少？</li>
+<li>为什么 <code>new Integer(127) == new Integer(127)</code> 为 false，而 <code>Integer.valueOf(127) == Integer.valueOf(127)</code> 为 true？</li>
+<li><code>NaN</code> 和 <code>Infinity</code> 在 Java 中如何表示？</li>
+<li>为什么浮点数计算有精度问题？如何避免？</li>
+<li><code>BigDecimal</code> 为什么能解决浮点数精度问题？</li>
+<li>Java 中的字符集默认是什么？在不同平台上会不一样吗？</li>
+<li><code>String</code>、<code>StringBuilder</code>、<code>StringBuffer</code> 区别？线程安全性？</li>
+<li>为什么 <code>String</code> 是不可变的？背后实现细节？</li>
+<li><code>intern()</code> 方法的作用是什么？</li>
+</ol>
+<hr>
+<h3 id="三、集合框架"><a href="#三、集合框架" class="headerlink" title="三、集合框架"></a>三、集合框架</h3><ol>
+<li><code>ArrayList</code> 和 <code>Vector</code> 的区别？</li>
+<li>为什么 <code>ArrayList</code> 的扩容是 <code>1.5 倍</code>？</li>
+<li><code>LinkedList</code> 是双向链表还是单向链表？</li>
+<li><code>HashSet</code> 底层是如何实现的？</li>
+<li><code>TreeSet</code> 和 <code>TreeMap</code> 的底层实现是什么？</li>
+<li><code>PriorityQueue</code> 的底层数据结构是什么？</li>
+<li><code>ConcurrentSkipListMap</code> 的底层原理是什么？</li>
+<li><code>CopyOnWriteArrayList</code> 的写时复制是怎么实现的？有什么优缺点？</li>
+<li><code>EnumMap</code> 和 <code>EnumSet</code> 是什么？为什么效率高？</li>
+<li><code>WeakHashMap</code> 和 <code>HashMap</code> 的区别？</li>
+</ol>
+<hr>
+<h3 id="四、异常-错误处理"><a href="#四、异常-错误处理" class="headerlink" title="四、异常 &amp; 错误处理"></a>四、异常 &amp; 错误处理</h3><ol>
+<li>Java 中的异常分为哪两大类？</li>
+<li><code>Error</code> 和 <code>Exception</code> 的区别？</li>
+<li>受检异常和非受检异常区别？</li>
+<li><code>throw</code> 和 <code>throws</code> 有什么区别？</li>
+<li><code>try-with-resources</code> 的底层原理是什么？</li>
+<li>自定义异常如何设计？继承哪个类？</li>
+<li>为什么不建议捕获 <code>Throwable</code>？</li>
+<li>异常链（Exception Chaining）是什么？</li>
+<li>Java 8 之后对异常处理有改进吗？</li>
+<li>如何在多线程环境下正确传递异常？</li>
+</ol>
+<hr>
+<h3 id="五、JVM-内存管理"><a href="#五、JVM-内存管理" class="headerlink" title="五、JVM &amp; 内存管理"></a>五、JVM &amp; 内存管理</h3><ol>
+<li>Java 内存模型（JMM）是什么？</li>
+<li>JVM 内存分为哪几个区域？每个区域的作用是什么？</li>
+<li>为什么 <code>String</code> 常量池要放在堆里而不是方法区？</li>
+<li>什么是垃圾回收（GC）的可达性分析算法？</li>
+<li>哪些对象可以作为 GC Roots？</li>
+<li>强引用、软引用、弱引用、虚引用的区别？</li>
+<li>GC 有哪些算法？标记-清除、标记-整理、复制算法区别？</li>
+<li>常见的垃圾收集器有哪些？G1、ZGC、Shenandoah 有什么特点？</li>
+<li>什么是 Stop-The-World (STW)？</li>
+<li>JVM 调优常见参数有哪些？</li>
+</ol>
+<hr>
+<h3 id="六、并发编程基础"><a href="#六、并发编程基础" class="headerlink" title="六、并发编程基础"></a>六、并发编程基础</h3><ol>
+<li>Java 中的 <code>volatile</code> 关键字的底层实现原理？</li>
+<li><code>synchronized</code> 的实现原理？对象头和 Monitor 是什么？</li>
+<li>偏向锁、轻量级锁、重量级锁的区别？</li>
+<li>什么是 CAS 操作？ABA 问题如何解决？</li>
+<li>什么是线程安全？举例哪些类是线程安全的？</li>
+<li>ThreadLocal 的底层原理是什么？为什么会有内存泄漏问题？</li>
+<li>线程池的核心参数有哪些？</li>
+<li>什么是拒绝策略？</li>
+<li>Executors 提供的几种常见线程池？</li>
+<li><code>Future</code> 和 <code>CompletableFuture</code> 区别？</li>
+</ol>
+<hr>
+<h3 id="七、编译-运行时"><a href="#七、编译-运行时" class="headerlink" title="七、编译 &amp; 运行时"></a>七、编译 &amp; 运行时</h3><ol>
+<li>Java 的反射机制是什么？底层原理？</li>
+<li>为什么反射性能差？JDK 9 之后如何优化？</li>
+<li>什么是动态代理？JDK 动态代理和 CGLIB 区别？</li>
+<li>注解的底层原理是什么？运行时注解如何实现？</li>
+<li>ClassLoader 的双亲委派模型是什么？</li>
+<li>如何打破双亲委派？</li>
+<li>什么是 SPI（Service Provider Interface）机制？</li>
+<li>Java 是如何实现跨平台的？</li>
+<li>JIT（即时编译器）优化了哪些东西？</li>
+<li>什么是逃逸分析？</li>
+</ol>
+<hr>
+<h3 id="八、常见场景-设计"><a href="#八、常见场景-设计" class="headerlink" title="八、常见场景 &amp; 设计"></a>八、常见场景 &amp; 设计</h3><ol>
+<li>单例模式在 Java 中有哪些实现方式？哪种最优？</li>
+<li>懒汉模式和饿汉模式的区别？</li>
+<li>枚举单例为什么是最佳实践？</li>
+<li>为什么要用工厂模式？</li>
+<li>装饰器模式和代理模式区别？</li>
+<li>Java 中的事件监听模型是怎么实现的？</li>
+<li>为什么 Java 不支持多继承？</li>
+<li>如何用 Java 实现回调机制？</li>
+<li>Java 中如何实现观察者模式？</li>
+<li><code>Optional</code> 的设计初衷是什么？</li>
+</ol>
+<hr>
+<h2 id="二、Java-并发编程（30题）"><a href="#二、Java-并发编程（30题）" class="headerlink" title="二、Java 并发编程（30题）"></a>二、Java 并发编程（30题）</h2><ol>
+<li>线程的生命周期？</li>
+<li>创建线程的方式有哪些？</li>
+<li>Runnable 和 Callable 的区别？</li>
+<li>Future 和 CompletableFuture 的区别？</li>
+<li>ThreadLocal 原理？</li>
+<li>synchronized 的锁优化机制？</li>
+<li>ReentrantLock 的实现原理？</li>
+<li>公平锁和非公平锁区别？</li>
+<li>乐观锁和悲观锁区别？</li>
+<li>AQS 原理？</li>
+<li>CountDownLatch 和 CyclicBarrier 区别？</li>
+<li>Semaphore 的实现原理？</li>
+<li>Exchanger 的使用场景？</li>
+<li>ForkJoinPool 的原理？</li>
+<li>CAS 操作的底层实现？</li>
+<li>ABA 问题是什么？如何解决？</li>
+<li>Atomic 原子类的原理？</li>
+<li>BlockingQueue 的实现原理？</li>
+<li>ConcurrentHashMap 的分段锁机制？</li>
+<li>ConcurrentHashMap 扩容机制？</li>
+<li>CopyOnWriteArrayList 的原理？</li>
+<li>线程池的核心参数？</li>
+<li>线程池的拒绝策略？</li>
+<li>线程池的工作流程？</li>
+<li>ThreadPoolExecutor 和 ScheduledThreadPoolExecutor 的区别？</li>
+<li>为什么不建议使用 Executors 创建线程池？</li>
+<li>JMM 内存可见性问题？</li>
+<li>happens-before 规则？</li>
+<li>死锁产生的条件？如何避免？</li>
+<li>常见并发容器有哪些？区别？</li>
+</ol>
+<hr>
+<h2 id="三、JVM-与性能优化（30题）"><a href="#三、JVM-与性能优化（30题）" class="headerlink" title="三、JVM 与性能优化（30题）"></a>三、JVM 与性能优化（30题）</h2><ol>
+<li>JVM 内存结构？</li>
+<li>堆和栈的区别？</li>
+<li>新生代、老年代、永久代（元空间）的区别？</li>
+<li>对象的创建过程？</li>
+<li>对象的内存分配策略？</li>
+<li>GC Roots 有哪些？</li>
+<li>垃圾回收算法有哪些？</li>
+<li>CMS 垃圾回收器的工作流程？</li>
+<li>G1 垃圾回收器原理？</li>
+<li>ZGC 和 Shenandoah 的特点？</li>
+<li>Minor GC 和 Full GC 的区别？</li>
+<li>OOM 常见类型？如何排查？</li>
+<li>类加载器的分类？</li>
+<li>双亲委派模型的破坏场景？</li>
+<li>JVM 常见参数调优？</li>
+<li>内存泄漏和内存溢出的区别？</li>
+<li>逃逸分析是什么？</li>
+<li>方法内联的原理？</li>
+<li>JIT 编译器的优化？</li>
+<li>Safepoint 机制？</li>
+<li>Stop The World 是什么？</li>
+<li>Finalize 方法的问题？</li>
+<li>JVM 如何判断对象可回收？</li>
+<li>TLAB 的作用？</li>
+<li>Direct Memory 为什么会 OOM？</li>
+<li>Metaspace 的作用？</li>
+<li>Full GC 触发条件？</li>
+<li>如何查看 JVM 内存使用情况？</li>
+<li>Arthas 常用命令？</li>
+<li>JVM 调优常见面试题？</li>
+</ol>
+<hr>
+<h2 id="四、Spring-Spring-Boot（30题）"><a href="#四、Spring-Spring-Boot（30题）" class="headerlink" title="四、Spring &amp; Spring Boot（30题）"></a>四、Spring &amp; Spring Boot（30题）</h2><ol>
+<li>Spring 的 IoC 容器原理？</li>
+<li>Bean 的生命周期？</li>
+<li>BeanFactory 和 ApplicationContext 的区别？</li>
+<li>单例 Bean 如何保证线程安全？</li>
+<li>Spring AOP 的实现原理？</li>
+<li>JDK 动态代理和 CGLIB 的区别？</li>
+<li>Spring 事务的传播机制？</li>
+<li>Spring 事务的隔离级别？</li>
+<li>@Transactional 的实现原理？</li>
+<li>循环依赖如何解决？</li>
+<li>Spring 的三级缓存解决了什么问题？</li>
+<li>Spring MVC 的工作流程？</li>
+<li>DispatcherServlet 的作用？</li>
+<li>Spring Boot 的自动装配原理？</li>
+<li>Spring Boot Starter 的机制？</li>
+<li>@ConfigurationProperties 和 @Value 的区别？</li>
+<li>Spring Boot 如何实现热部署？</li>
+<li>Spring Boot 如何处理配置文件？</li>
+<li>@Conditional 注解的作用？</li>
+<li>Spring Boot 常见的优化点？</li>
+<li>Spring 中的事件机制？</li>
+<li>ApplicationListener 的使用？</li>
+<li>Spring 如何加载配置文件？</li>
+<li>Bean 的作用域有哪些？</li>
+<li>Spring 如何实现异步调用？</li>
+<li>Spring 中的 @Lazy 注解？</li>
+<li>Spring 的资源加载机制？</li>
+<li>Spring Boot 的内嵌容器有哪些？</li>
+<li>Spring Boot Actuator 的作用？</li>
+<li>Spring Boot 如何与 Docker&#x2F;K8s 结合？</li>
+</ol>
+<hr>
+<h2 id="五、Spring-Cloud（30题）"><a href="#五、Spring-Cloud（30题）" class="headerlink" title="五、Spring Cloud（30题）"></a>五、Spring Cloud（30题）</h2><ol>
+<li>Spring Cloud 是什么？</li>
+<li>Spring Cloud 和 Dubbo 的区别？</li>
+<li>Eureka 的工作原理？</li>
+<li>Eureka 的自我保护机制？</li>
+<li>Ribbon 的负载均衡策略？</li>
+<li>Ribbon 和 Nginx 的区别？</li>
+<li>Feign 的工作原理？</li>
+<li>Feign 如何支持熔断？</li>
+<li>Hystrix 的工作原理？</li>
+<li>Hystrix 的线程池隔离和信号量隔离？</li>
+<li>Resilience4j 和 Hystrix 区别？</li>
+<li>Gateway 的核心功能？</li>
+<li>Gateway 和 Zuul 的区别？</li>
+<li>Config Server 的作用？</li>
+<li>Config Server 如何保证配置实时刷新？</li>
+<li>Spring Cloud Bus 的原理？</li>
+<li>Sleuth 的作用？</li>
+<li>Sleuth 与 Zipkin 的关系？</li>
+<li>分布式链路追踪的原理？</li>
+<li>Spring Cloud Stream 的作用？</li>
+<li>消息驱动模型和事件驱动模型区别？</li>
+<li>Nacos 和 Eureka 的区别？</li>
+<li>Nacos 配置中心和注册中心的实现原理？</li>
+<li>Sentinel 的工作原理？</li>
+<li>限流的常见算法（令牌桶、漏桶）？</li>
+<li>熔断和降级的区别？</li>
+<li>CAP 定理和 Spring Cloud 的关系？</li>
+<li>Spring Cloud 与 Kubernetes 的关系？</li>
+<li>微服务中的灰度发布？</li>
+<li>Spring Cloud 如何实现服务网格？</li>
+</ol>
+<hr>
+<h2 id="六、微服务架构-分布式系统（30题）"><a href="#六、微服务架构-分布式系统（30题）" class="headerlink" title="六、微服务架构 &amp; 分布式系统（30题）"></a>六、微服务架构 &amp; 分布式系统（30题）</h2><ol>
+<li>什么是微服务？</li>
+<li>微服务与 SOA 的区别？</li>
+<li>微服务的优缺点？</li>
+<li>微服务的拆分原则？</li>
+<li>如何保证微服务之间的数据一致性？</li>
+<li>分布式事务有哪些解决方案？</li>
+<li>TCC、SAGA、XA 的区别？</li>
+<li>本地消息表和可靠消息最终一致性？</li>
+<li>分布式锁的实现方式？</li>
+<li>Redis 分布式锁的缺陷？</li>
+<li>Zookeeper 分布式锁的实现？</li>
+<li>数据库分库分表策略？</li>
+<li>水平拆分与垂直拆分区别？</li>
+<li>分布式 ID 生成方案？</li>
+<li>雪花算法的原理？</li>
+<li>API 网关的作用？</li>
+<li>服务注册与发现机制？</li>
+<li>微服务如何保证高可用？</li>
+<li>微服务中的限流和熔断？</li>
+<li>微服务如何保证安全性？</li>
+<li>OAuth2 的原理？</li>
+<li>JWT 的作用？</li>
+<li>单点登录 SSO 的实现？</li>
+<li>配置中心的作用？</li>
+<li>微服务中的监控体系？</li>
+<li>Prometheus 的原理？</li>
+<li>ELK 在微服务中的应用？</li>
+<li>服务调用链路追踪的意义？</li>
+<li>服务雪崩效应是什么？</li>
+<li>如何设计一个高并发的微服务系统？</li>
+</ol>
+<hr>
+<h2 id="七、数据库-缓存（30题）"><a href="#七、数据库-缓存（30题）" class="headerlink" title="七、数据库 &amp; 缓存（30题）"></a>七、数据库 &amp; 缓存（30题）</h2><ol>
+<li>MySQL 的存储引擎区别？</li>
+<li>InnoDB 和 MyISAM 的区别？</li>
+<li>MySQL 的事务特性？</li>
+<li>MVCC 的实现原理？</li>
+<li>MySQL 的索引类型？</li>
+<li>聚簇索引和非聚簇索引？</li>
+<li>B+ 树索引原理？</li>
+<li>覆盖索引和回表？</li>
+<li>索引下推优化？</li>
+<li>MySQL 的锁机制？</li>
+<li>行锁和表锁区别？</li>
+<li>间隙锁是什么？</li>
+<li>死锁的排查方法？</li>
+<li>SQL 执行计划如何分析？</li>
+<li>慢查询优化方法？</li>
+<li>数据库分库分表的难点？</li>
+<li>分布式事务如何保证？</li>
+<li>Redis 的数据结构？</li>
+<li>Redis 为什么快？</li>
+<li>Redis 的持久化机制？</li>
+<li>Redis 的过期策略？</li>
+<li>Redis 的内存淘汰机制？</li>
+<li>Redis 的主从复制原理？</li>
+<li>Redis 的哨兵机制？</li>
+<li>Redis 的集群模式？</li>
+<li>Redis 的分布式锁实现？</li>
+<li>Redis 的常见问题？</li>
+<li>缓存穿透、击穿、雪崩？</li>
+<li>如何保证缓存和数据库一致性？</li>
+<li>Redis 和本地缓存 Caffeine 的区别？</li>
+</ol>
+<hr>
+<h2 id="八、消息队列（30题）"><a href="#八、消息队列（30题）" class="headerlink" title="八、消息队列（30题）"></a>八、消息队列（30题）</h2><ol>
+<li>为什么要使用消息队列？</li>
+<li>消息队列的优缺点？</li>
+<li>RabbitMQ 的核心组件？</li>
+<li>RabbitMQ 的消息确认机制？</li>
+<li>Kafka 的核心概念？</li>
+<li>Kafka 的分区机制？</li>
+<li>Kafka 的副本机制？</li>
+<li>Kafka 的 ISR 原理？</li>
+<li>Kafka 的消费组原理？</li>
+<li>Kafka 的 offset 提交方式？</li>
+<li>Kafka 的高吞吐量原理？</li>
+<li>Kafka 的零拷贝机制？</li>
+<li>RocketMQ 的核心特点？</li>
+<li>RocketMQ 的顺序消息？</li>
+<li>RocketMQ 的事务消息？</li>
+<li>如何保证消息不丢失？</li>
+<li>如何保证消息不重复消费？</li>
+<li>如何保证消息有序？</li>
+<li>消息堆积的解决办法？</li>
+<li>如何设计延迟队列？</li>
+<li>死信队列的作用？</li>
+<li>幂等性的实现方式？</li>
+<li>消息队列的限流方式？</li>
+<li>消息队列的监控？</li>
+<li>Kafka 和 RabbitMQ 的区别？</li>
+<li>Kafka 和 RocketMQ 的区别？</li>
+<li>Pulsar 的特点？</li>
+<li>消息中间件如何保证高可用？</li>
+<li>消息队列如何做水平扩展？</li>
+<li>消息队列和事件总线的区别？</li>
+</ol>
+<hr>
+<h2 id="九、DevOps-容器化（30题）"><a href="#九、DevOps-容器化（30题）" class="headerlink" title="九、DevOps &amp; 容器化（30题）"></a>九、DevOps &amp; 容器化（30题）</h2><ol>
+<li>CI&#x2F;CD 的流程？</li>
+<li>Jenkins 的作用？</li>
+<li>Docker 的核心原理？</li>
+<li>Docker 镜像和容器的区别？</li>
+<li>Dockerfile 的常见指令？</li>
+<li>镜像分层机制？</li>
+<li>容器与虚拟机的区别？</li>
+<li>Kubernetes 的核心组件？</li>
+<li>Pod 的生命周期？</li>
+<li>Deployment 和 StatefulSet 区别？</li>
+<li>K8s 的服务发现机制？</li>
+<li>ConfigMap 和 Secret 的区别？</li>
+<li>Ingress 的作用？</li>
+<li>K8s 的水平扩缩容机制？</li>
+<li>K8s 的滚动更新机制？</li>
+<li>K8s 如何做灰度发布？</li>
+<li>K8s 的调度策略？</li>
+<li>K8s 的网络模型？</li>
+<li>Service Mesh 的作用？</li>
+<li>Istio 的工作原理？</li>
+<li>Helm 的作用？</li>
+<li>K8s 的存储方案？</li>
+<li>Prometheus 的监控体系？</li>
+<li>Grafana 的作用？</li>
+<li>K8s 的安全机制？</li>
+<li>容器的资源限制？</li>
+<li>Docker Compose 的作用？</li>
+<li>DevOps 的最佳实践？</li>
+<li>GitOps 的理念？</li>
+<li>K8s 如何保证高可用？</li>
+</ol>
+<hr>
+<h2 id="十、场景设计题（30题）"><a href="#十、场景设计题（30题）" class="headerlink" title="十、场景设计题（30题）"></a>十、场景设计题（30题）</h2><ol>
+<li>如何设计一个秒杀系统？</li>
+<li>如何设计一个短链系统？</li>
+<li>如何设计一个分布式 ID 生成系统？</li>
+<li>如何设计一个高可用缓存系统？</li>
+<li>如何设计一个订单系统？</li>
+<li>如何设计一个支付系统？</li>
+<li>如何设计一个消息推送系统？</li>
+<li>如何设计一个日志收集系统？</li>
+<li>如何设计一个搜索引擎？</li>
+<li>如何设计一个推荐系统？</li>
+<li>如何设计一个分布式锁？</li>
+<li>如何设计一个统一鉴权系统？</li>
+<li>如何设计一个限流系统？</li>
+<li>如何设计一个灰度发布系统？</li>
+<li>如何设计一个电商购物车？</li>
+<li>如何设计一个库存系统？</li>
+<li>如何设计一个分布式文件存储系统？</li>
+<li>如何设计一个微服务网关？</li>
+<li>如何设计一个分布式任务调度系统？</li>
+<li>如何设计一个监控报警系统？</li>
+<li>如何设计一个高并发聊天室？</li>
+<li>如何设计一个排行榜系统？</li>
+<li>如何设计一个评论系统？</li>
+<li>如何设计一个分布式事务系统？</li>
+<li>如何设计一个高可用注册中心？</li>
+<li>如何设计一个数据同步系统？</li>
+<li>如何设计一个 API 限速系统？</li>
+<li>如何设计一个高可用的支付网关？</li>
+<li>如何设计一个跨境电商架构？</li>
+<li>如何设计一个金融级别的微服务系统？</li>
+</ol>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/09/11/%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/" data-id="cmffake6v001150uye2zs3trn" data-title="面试题目" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-Markdown/" rel="tag">Hexo, Markdown</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          计算机基础面试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/09/11/%E9%9D%A2%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">面试</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Markdown/" rel="tag">Hexo, Markdown</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo-Markdown/" style="font-size: 10px;">Hexo, Markdown</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">九月 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/09/11/8.21%E5%AD%A6%E4%BC%9A/">8.21学会</a>
+          </li>
+        
+          <li>
+            <a href="/2025/09/11/web/">web</a>
+          </li>
+        
+          <li>
+            <a href="/2025/09/11/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+          </li>
+        
+          <li>
+            <a href="/2025/09/11/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">命令大全</a>
+          </li>
+        
+          <li>
+            <a href="/2025/09/11/%E7%AE%97%E6%B3%95/">算法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Charlotte<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
