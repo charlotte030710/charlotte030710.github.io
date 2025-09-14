@@ -2,11 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const titleElement = document.querySelector("#site-title");
   if (!titleElement) return; // 不是首页，直接退出
 
-  // 设置字体和颜色
-  titleElement.style.fontFamily = "'KaiTi', 'STKaiti', 'SimSun', serif"; // 楷体/宋体风格
-  titleElement.style.color = "#c44569"; // 暖红色
-  titleElement.style.fontSize = "28px"; // 字体大小
-  
+
   
 const poems = [
     "长风破浪会有时，直挂云帆济沧海。", // 李白《行路难》（困顿时悟理想，失意中见豁达）
