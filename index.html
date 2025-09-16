@@ -1,11 +1,12 @@
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- 引入 Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-5YDCYjT5Kx5a10qF7aC9DwR7Wp2XcD3gog0O3VBp1o299rC2LhVn7q2cJ4/J90yJ492m1Pn67z8iHwH6W8s0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
-  /* 全屏背景容器 */
+  /* 全屏背景容器 & 基础样式重置 */
   body, html {
     margin: 0;
     padding: 0;
@@ -19,7 +20,8 @@
   /* 背景视频 */
   .bg-container {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -31,30 +33,43 @@
     object-fit: cover;
   }
 
-  /* 中间欢迎内容 */
-  .welcome {
+  /* 核心：欢迎内容居中容器（垂直+水平居中） */
+  .welcome-wrapper {
     position: relative;
     z-index: 1;
-    text-align: center;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
   }
 
-  .welcome h1 {
+  /* 欢迎文字样式（带打字机光标） */
+  .welcome-title {
+    color: white;
     font-size: 3em;
     margin-bottom: 30px;
+    font-weight: normal;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 8px;
   }
 
-  .welcome a {
+  /* 进入博客按钮 */
+  .enter-btn {
     text-decoration: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
     padding: 12px 24px;
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s;
+    font-size: 1.1em;
   }
 
-  .welcome a:hover {
+  .enter-btn:hover {
     background: #333;
     color: white;
   }
@@ -64,7 +79,7 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -79,9 +94,20 @@
   }
 
   .music-control:hover {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     transform: scale(1.1);
     color: #333;
+  }
+
+  /* 响应式调整（适配手机屏幕） */
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 2em;
+    }
+    .enter-btn {
+      padding: 10px 20px;
+      font-size: 1em;
+    }
   }
 </style>
 
@@ -90,36 +116,71 @@
 <div class="bg-container">
   <video autoplay muted loop>
     <source src="/assets/videos/1.mp4" type="video/mp4">
+    您的浏览器不支持视频播放，请升级浏览器
   </video>
 </div>
+<!-- 核心：居中的欢迎内容（文字+按钮） -->
 
-<!-- 中间欢迎内容 -->
-<div class="welcome">
-  <h1>✨ 欢迎来到我的博客</h1>
-  <a href="/blog/">进入博客</a>
+<div class="welcome-wrapper">
+  <h1 class="welcome-title" id="typewriter-title">✨ </h1>
+  <a href="/blog/" class="enter-btn">进入博客</a>
 </div>
+
 <!-- 音乐按钮 -->
-<button class="music-control" onclick="toggleMusic()" title="播放/暂停音乐">
+<button class="music-control">
   <i class="fa-solid fa-play"></i>
 </button>
 
 <!-- 背景音乐 -->
+<audio id="bg-music" src="/assets/music/bg.mp3" loop>
+  您的浏览器不支持音频播放，请升级浏览器
+</audio>
 
-<p><audio id="bg-music" src="/assets/music/bg.mp3" loop></audio></p>
 <script>
-  // 音乐控制
+  // 音乐控制功能
   const music = document.getElementById("bg-music");
-  const btn = document.querySelector(".music-control");
-  const icon = btn.querySelector("i");
+  const musicBtn = document.querySelector(".music-control");
+  const musicIcon = musicBtn.querySelector("i");
+
   function toggleMusic() {
     if (music.paused) {
       music.play();
-      icon.classList.remove("fa-play");
-      icon.classList.add("fa-pause");
+      musicIcon.classList.remove("fa-play");
+      musicIcon.classList.add("fa-pause");
     } else {
       music.pause();
-      icon.classList.remove("fa-pause");
-      icon.classList.add("fa-play");
+      musicIcon.classList.remove("fa-pause");
+      musicIcon.classList.add("fa-play");
     }
   }
+  musicBtn.addEventListener("click", toggleMusic);
+
+  // 打字机效果
+  const typewriterTitle = document.getElementById("typewriter-title");
+  const targetText = "✨ 欢迎来到我的博客";
+  let currentIndex = 0;
+  const typingSpeed = 150;
+  const cursorBlinkSpeed = 500;
+
+  function typeText() {
+    if (currentIndex < targetText.length) {
+      typewriterTitle.textContent += targetText.charAt(currentIndex);
+      currentIndex++;
+      setTimeout(typeText, typingSpeed);
+    } else {
+      startCursorBlink();
+    }
+  }
+
+  function startCursorBlink() {
+    setInterval(() => {
+      typewriterTitle.style.borderRightColor =
+        typewriterTitle.style.borderRightColor === "transparent"
+          ? "white"
+          : "transparent";
+    }, cursorBlinkSpeed);
+  }
+
+  window.addEventListener("load", typeText);
 </script>
+
