@@ -27,7 +27,7 @@
     z-index: -1;
   }
 
-  .bg-container img, .bg-container video {
+  .bg-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -74,29 +74,45 @@
     color: white;
   }
 
-  /* 音乐按钮固定右上角 */
+  /* 音乐按钮优化 */
   .music-control {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    color: #333;
     z-index: 2;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
   .music-control:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
     transform: scale(1.1);
-    color: #333;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+
+  /* 播放状态下的动画效果 */
+  .music-control.playing {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    color: white;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(255, 105, 180, 0.9); }
+    100% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.6); }
   }
 
   /* 响应式调整（适配手机屏幕） */
@@ -112,15 +128,14 @@
 </style>
 
 <!-- 背景视频 -->
-
 <div class="bg-container">
   <video autoplay muted loop>
     <source src="/assets/videos/1.mp4" type="video/mp4">
     您的浏览器不支持视频播放，请升级浏览器
   </video>
 </div>
-<!-- 核心：居中的欢迎内容（文字+按钮） -->
 
+<!-- 核心：居中的欢迎内容（文字+按钮） -->
 <div class="welcome-wrapper">
   <h1 class="welcome-title" id="typewriter-title">✨ </h1>
   <a href="/blog/" class="enter-btn">进入博客</a>
@@ -128,36 +143,31 @@
 
 <!-- 音乐按钮 -->
 <button class="music-control">
-  <i class="fa-solid fa-play"></i>
+  <i class="fa-solid fa-music"></i>
 </button>
 
 <!-- 背景音乐 -->
-<audio id="bg-music" src="/assets/music/bg.mp3" loop>
-  您的浏览器不支持音频播放，请升级浏览器
-</audio>
+<audio id="bg-music" src="/assets/music/bg.mp3" loop></audio>
 
 <script>
   // 音乐控制功能
   const music = document.getElementById("bg-music");
   const musicBtn = document.querySelector(".music-control");
-  const musicIcon = musicBtn.querySelector("i");
 
   function toggleMusic() {
     if (music.paused) {
       music.play();
-      musicIcon.classList.remove("fa-play");
-      musicIcon.classList.add("fa-pause");
+      musicBtn.classList.add("playing");
     } else {
       music.pause();
-      musicIcon.classList.remove("fa-pause");
-      musicIcon.classList.add("fa-play");
+      musicBtn.classList.remove("playing");
     }
   }
   musicBtn.addEventListener("click", toggleMusic);
 
   // 打字机效果
   const typewriterTitle = document.getElementById("typewriter-title");
-  const targetText = " 欢迎来到我的博客";
+  const targetText = "✨ 欢迎来到我的博客";
   let currentIndex = 0;
   const typingSpeed = 150;
   const cursorBlinkSpeed = 500;
