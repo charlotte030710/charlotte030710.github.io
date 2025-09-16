@@ -3,10 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- 引入 Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-5YDCYjT5Kx5a10qF7aC9DwR7Wp2XcD3gog0O3VBp1o299rC2LhVn7q2cJ4/J90yJ492m1Pn67z8iHwH6W8s0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
 <style>
-  /* 全屏背景容器 & 基础样式重置 */
   body, html {
     margin: 0;
     padding: 0;
@@ -33,7 +32,7 @@
     object-fit: cover;
   }
 
-  /* 核心：欢迎内容居中容器（垂直+水平居中） */
+  /* 欢迎内容居中 */
   .welcome-wrapper {
     position: relative;
     z-index: 1;
@@ -45,7 +44,7 @@
     width: 100%;
   }
 
-  /* 欢迎文字样式（带打字机光标） */
+  /* 打字机文字 */
   .welcome-title {
     color: white;
     font-size: 3em;
@@ -57,7 +56,7 @@
     padding-right: 8px;
   }
 
-  /* 进入博客按钮 */
+  /* 进入按钮 */
   .enter-btn {
     text-decoration: none;
     background: rgba(255, 255, 255, 0.9);
@@ -74,12 +73,12 @@
     color: white;
   }
 
-  /* 音乐按钮优化 */
+  /* 音乐按钮 */
   .music-control {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 50%;
     width: 55px;
@@ -88,7 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: #333;
     z-index: 2;
     transition: all 0.3s ease;
@@ -97,25 +96,36 @@
 
   .music-control:hover {
     background: rgba(255, 255, 255, 0.95);
-    color: #000;
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   }
 
-  /* 播放状态下的动画效果 */
+  /* 播放状态（黑胶唱片旋转） */
   .music-control.playing {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
     color: white;
-    animation: pulse 2s infinite;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   }
 
-  @keyframes pulse {
-    0% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.6); }
-    50% { box-shadow: 0 0 20px rgba(255, 105, 180, 0.9); }
-    100% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.6); }
+  .music-control.playing i {
+    animation: spin 4s linear infinite;
   }
 
-  /* 响应式调整（适配手机屏幕） */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* 暂停状态（音符浮动） */
+  .music-control.paused i {
+    animation: floatNote 2s ease-in-out infinite;
+  }
+
+  @keyframes floatNote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  /* 响应式 */
   @media (max-width: 768px) {
     .welcome-title {
       font-size: 2em;
@@ -131,18 +141,18 @@
 <div class="bg-container">
   <video autoplay muted loop>
     <source src="/assets/videos/1.mp4" type="video/mp4">
-    您的浏览器不支持视频播放，请升级浏览器
+    您的浏览器不支持视频播放
   </video>
 </div>
 
-<!-- 核心：居中的欢迎内容（文字+按钮） -->
+<!-- 欢迎内容 -->
 <div class="welcome-wrapper">
   <h1 class="welcome-title" id="typewriter-title">✨ </h1>
   <a href="/blog/" class="enter-btn">进入博客</a>
 </div>
 
 <!-- 音乐按钮 -->
-<button class="music-control">
+<button class="music-control paused">
   <i class="fa-solid fa-music"></i>
 </button>
 
@@ -150,27 +160,33 @@
 <audio id="bg-music" src="/assets/music/bg.mp3" loop></audio>
 
 <script>
-  // 音乐控制功能
   const music = document.getElementById("bg-music");
   const musicBtn = document.querySelector(".music-control");
+  const icon = musicBtn.querySelector("i");
 
   function toggleMusic() {
     if (music.paused) {
       music.play();
       musicBtn.classList.add("playing");
+      musicBtn.classList.remove("paused");
+      icon.classList.remove("fa-music");
+      icon.classList.add("fa-compact-disc");
     } else {
       music.pause();
       musicBtn.classList.remove("playing");
+      musicBtn.classList.add("paused");
+      icon.classList.remove("fa-compact-disc");
+      icon.classList.add("fa-music");
     }
   }
+
   musicBtn.addEventListener("click", toggleMusic);
 
   // 打字机效果
   const typewriterTitle = document.getElementById("typewriter-title");
-  const targetText = "✨ 欢迎来到我的博客";
+  const targetText = "欢迎来到我的博客";
   let currentIndex = 0;
   const typingSpeed = 150;
-  const cursorBlinkSpeed = 500;
 
   function typeText() {
     if (currentIndex < targetText.length) {
@@ -178,17 +194,9 @@
       currentIndex++;
       setTimeout(typeText, typingSpeed);
     } else {
-      startCursorBlink();
+      // 打完后立即去掉光标
+      typewriterTitle.style.borderRight = "none";
     }
-  }
-
-  function startCursorBlink() {
-    setInterval(() => {
-      typewriterTitle.style.borderRightColor =
-        typewriterTitle.style.borderRightColor === "transparent"
-          ? "white"
-          : "transparent";
-    }, cursorBlinkSpeed);
   }
 
   window.addEventListener("load", typeText);
