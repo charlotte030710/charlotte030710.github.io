@@ -1,210 +1,230 @@
 
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Favicon 设置 -->
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg">
-
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
   <title>浮生若梦</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      overflow: hidden;
+    }
+    
+    /* ── 背景视频 ── */
+    .bg-container {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+    
+    .bg-container::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+    }
+    
+    .bg-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    /* ── 主内容区 ── */
+    .welcome-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 36px;
+      padding: 0 20px;
+    }
+    
+    /* ── 标题 ── */
+    .welcome-title {
+      color: #fff;
+      font-size: clamp(1.8em, 5vw, 3.2em);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+      border-right: 2px solid rgba(255,255,255,0.8);
+      white-space: nowrap;
+      overflow: hidden;
+      padding-right: 6px;
+      min-height: 1.2em;
+      transition: border-color 0.3s;
+    }
+    
+    .welcome-title.done {
+      border-color: transparent;
+    }
+    
+    /* ── 进入按钮 ── */
+    .enter-btn {
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 13px 36px;
+      border-radius: 40px;
+      font-size: 1em;
+      letter-spacing: 0.12em;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: background 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    
+    .enter-btn.visible {
+      animation: fadeUp 0.6s ease forwards;
+    }
+    
+    .enter-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    
+    .enter-btn:active {
+      transform: translateY(0);
+    }
+    
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* ── 音乐按钮 ── */
+    .music-control {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3em;
+      color: #fff;
+      z-index: 2;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+    
+    .music-control:hover {
+      background: rgba(255, 255, 255, 0.28);
+      transform: scale(1.08);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    
+    .music-control.playing {
+      background: rgba(255, 180, 190, 0.3);
+      border-color: rgba(255, 200, 210, 0.7);
+    }
+    
+    .music-control.playing i {
+      animation: spin 4s linear infinite;
+    }
+    
+    .music-control.paused i {
+      animation: floatNote 2s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    
+    @keyframes floatNote {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-4px); }
+    }
+  </style>
 </head>
 
-<!-- 引入 Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
-<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    overflow: hidden;
-    position: relative;
-  }
-  /* 背景视频 */
-  .bg-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
-  .bg-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* 欢迎内容居中 */
-  .welcome-wrapper {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-  }
-
-  /* 打字机文字 */
-  .welcome-title {
-    color: white;
-    font-size: 3em;
-    margin-bottom: 30px;
-    font-weight: normal;
-    border-right: 2px solid white;
-    white-space: nowrap;
-    overflow: hidden;
-    padding-right: 8px;
-  }
-
-  /* 进入按钮 */
-  .enter-btn {
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-    font-size: 1.1em;
-  }
-
-  .enter-btn:hover {
-    background: #333;
-    color: white;
-  }
-
-  /* 音乐按钮 */
-  .music-control {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6em;
-    color: #333;
-    z-index: 2;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-
-  .music-control:hover {
-    background: rgba(255, 255, 255, 0.95);
-    transform: scale(1.1);
-  }
-
-  /* 播放状态（黑胶唱片旋转） */
-  .music-control.playing {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
-    color: white;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  }
-
-  .music-control.playing i {
-    animation: spin 4s linear infinite;
-  }
-
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  /* 暂停状态（音符浮动） */
-  .music-control.paused i {
-    animation: floatNote 2s ease-in-out infinite;
-  }
-
-  @keyframes floatNote {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-  }
-
-  /* 响应式 */
-  @media (max-width: 768px) {
-    .welcome-title {
-      font-size: 2em;
-    }
-    .enter-btn {
-      padding: 10px 20px;
-      font-size: 1em;
-    }
-  }
-</style>
-
 <!-- 背景视频 -->
-
 <div class="bg-container">
-  <video autoplay muted loop>
+  <video autoplay muted loop playsinline>
     <source src="/assets/videos/1.mp4" type="video/mp4">
-    您的浏览器不支持视频播放
   </video>
 </div>
-<!-- 欢迎内容 -->
 
+<!-- 欢迎内容 -->
 <div class="welcome-wrapper">
-  <h1 class="welcome-title" id="typewriter-title">✨ </h1>
-  <a href="/blog/" class="enter-btn">进入博客</a>
+  <h1 class="welcome-title" id="typewriter-title"></h1>
+  <a href="/blog/" class="enter-btn" id="enter-btn">进入博客</a>
 </div>
+
 <!-- 音乐按钮 -->
-<button class="music-control paused">
+<button class="music-control" id="music-btn" aria-label="播放/暂停背景音乐">
   <i class="fa-solid fa-music"></i>
 </button>
 
 <!-- 背景音乐 -->
-<audio id="bg-music" src="/assets/music/bg.mp3" loop></audio>
+<audio id="bg-music" src="/assets/music/bg.mp3" loop preload="none"></audio>
 
 <script>
-  const music = document.getElementById("bg-music");
-  const musicBtn = document.querySelector(".music-control");
-  const icon = musicBtn.querySelector("i");
+  /* ── 音乐控制 ── */
+  const music    = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("music-btn");
+  const icon     = musicBtn.querySelector("i");
 
   function toggleMusic() {
     if (music.paused) {
-      music.play();
+      music.play().catch(() => {});
       musicBtn.classList.add("playing");
       musicBtn.classList.remove("paused");
-      icon.classList.remove("fa-music");
-      icon.classList.add("fa-compact-disc");
+      icon.className = "fa-solid fa-compact-disc";
     } else {
       music.pause();
       musicBtn.classList.remove("playing");
       musicBtn.classList.add("paused");
-      icon.classList.remove("fa-compact-disc");
-      icon.classList.add("fa-music");
+      icon.className = "fa-solid fa-music";
     }
   }
 
   musicBtn.addEventListener("click", toggleMusic);
 
-  // 打字机效果
-  const typewriterTitle = document.getElementById("typewriter-title");
-  const targetText = "欢迎来到我的博客";
-  let currentIndex = 0;
-  const typingSpeed = 150;
+  /* ── 打字机效果 ── */
+  const titleEl   = document.getElementById("typewriter-title");
+  const enterBtn  = document.getElementById("enter-btn");
+  const prefix    = "✨ ";
+  const text      = "欢迎来到我的博客";
+  const fullText  = prefix + text;
+  let index       = 0;
 
-  function typeText() {
-    if (currentIndex < targetText.length) {
-      typewriterTitle.textContent += targetText.charAt(currentIndex);
-      currentIndex++;
-      setTimeout(typeText, typingSpeed);
+  function typeNext() {
+    if (index < fullText.length) {
+      titleEl.textContent += fullText[index++];
+      setTimeout(typeNext, index <= prefix.length ? 80 : 150);
     } else {
-      // 打完后立即去掉光标
-      typewriterTitle.style.borderRight = "none";
+      titleEl.classList.add("done");
+      enterBtn.classList.add("visible");
     }
   }
 
-  window.addEventListener("load", typeText);
+  window.addEventListener("load", typeNext);
 </script>
+
 
