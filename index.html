@@ -40,6 +40,8 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      transform: translateZ(0);
+      will-change: transform;
     }
     
     /* ── 主内容区 ── */
@@ -77,18 +79,17 @@
     /* ── 进入按钮 ── */
     .enter-btn {
       text-decoration: none;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.18);
       color: #fff;
       padding: 13px 36px;
       border-radius: 40px;
       font-size: 1em;
       letter-spacing: 0.12em;
       border: 1px solid rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      transition: background 0.3s, border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+      transition: background 0.25s, border-color 0.25s, transform 0.2s;
       opacity: 0;
       transform: translateY(12px);
+      will-change: transform, opacity;
     }
     
     .enter-btn.visible {
@@ -96,10 +97,9 @@
     }
     
     .enter-btn:hover {
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.28);
       border-color: #fff;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     }
     
     .enter-btn:active {
@@ -115,10 +115,8 @@
       position: fixed;
       top: 20px;
       right: 20px;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.18);
       border: 1px solid rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -135,7 +133,6 @@
     .music-control:hover {
       background: rgba(255, 255, 255, 0.28);
       transform: scale(1.08);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
     
     .music-control.playing {
